@@ -1,54 +1,43 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# UK Rides Hub (A theme park database and reviews site)
 
-Welcome,
+For my Milestone 3 project I am creating a reviews site for theme parks on a database using Mongodb.
 
-This is the Code Institute student template for using Mongo. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# UX
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about this template and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **May 23rd, 2024**
+## Wireframes
 
-## IDE Reminders
+### Home Page - Mobile
+![image](wireframes/home-page-mobile.png)
 
-### Connecting your database
+### Home Page - Desktop
+![image](wireframes/home-page-desktop.png)
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+### Rides Page - Mobile
+![image](wireframes/rides-page-mobile.png)
 
-### Other commands
+### Rides Page - Desktop
+![image](wireframes/rides-page-desktop.png)
 
-#### Clear screen in Mongo Shell:
+### Registration Page - Mobile
+![image](wireframes/registration-page-mobile.png)
 
-- `cls`
+### Registration Page - Desktop
+![image](wireframes/registration-page-desktop.png)
 
-#### Show all database collections:
+### Login Page - Mobile
+![image](wireframes/login-page-mobile.png)
 
-- `show collections`
+### Login Page - Desktop
+![image](wireframes/login-page-desktop.png)
 
-#### Run your project
+### Ratings/Review Form (In the form of a Modal, similar for all screen sizes)
+![image](wireframes/login-page-desktop.png)
 
-As we need to run a backend Python file, we should use the command `python3 app.py`, if your Python file is named `app.py` of course.
+## User Stories
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-In most cloudbased IDEs you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-### To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In your IDE, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+* As a user I should be able to find out the purpose of the website and what it is about from the home page.
+* As a user I should be able to see a list of rides and search for them on the rides page.
+* As a user, on each ride container I should be able to click open a link to a modal with rating/reviewing rides form for it to be submitted to the database and the reviews should available to read on the website somewhere.
+* As a user I should be able to register an account.
+* As a user I should be able to login to my account.
+* As a user I expect the website to be responsive on a range of screen sizes.
