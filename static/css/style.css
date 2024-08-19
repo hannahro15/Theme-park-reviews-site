@@ -13,3 +13,24 @@ body {
 #home-content {
     padding: 20px;
 }
+
+.card {
+    width: 18rem;
+    margin: 10px;
+}
+
+.ride-image {
+    float: left;
+    width: 100%;
+    height: auto;
+}
+
+.ride-info {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
+.ratings-reviews-button {
+    margin: 10px;
+}
