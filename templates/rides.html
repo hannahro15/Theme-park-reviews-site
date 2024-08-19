@@ -6,11 +6,10 @@
             <div class="card-body">
                 <h5 class="card-title text-center">{{ ride.ride_name }}</h5>
                 <p class="card-text text-center">{{ ride.theme_park }}</p>
-                <img src="{{ ride.image_url }}" class="card-img-top" alt="icon-image"> 
+                <img src="{{ ride.image_url }}" class="card-img-top"> 
                 <div class="ride-info">
-                    <p class="card-text"><strong>Description: </strong>{{ ride.description }}</p>
                     <p class="card-text"><strong>Type: </strong>{{ ride.type }}</p>
-                    <p class="card-text"><strong>Minimum height restriction: </strong>{{ ride.height_restriction }}</p>
+                    <p class="card-text"><strong>Description: </strong>{{ ride.description }}</p>
                 </div>
                 <div class="ratings-reviews-button">
                 <a href="#" class="btn btn-primary">Click here to rate/review this ride</a>
