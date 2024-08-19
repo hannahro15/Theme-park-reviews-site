@@ -1,28 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
-<div class ="container">
+<div class="container">
     <h1 class="text-center">Theme Park Rides</h1>
-        <div class="row">
-            {% for ride in rides %}
-            <div class="col-lg-3 col-md-4 col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">{{ ride.ride_name }}</h5>
-                        <p class="card-text text-center">{{ ride.theme_park }}</p>
-                        <img src="{{ ride.image_url }}" class="card-img-top">
-                        <div class="ride-info">
-                            <p class="card-text"><strong>Type: </strong>{{ ride.type }}</p>
-                            <p class="card-text"><strong>Description: </strong>{{ ride.description }}</p>
-                        </div>
-                        <div class="ratings-reviews-button">
-                            <a href="#" class="btn btn-primary">Click here to rate/review this ride</a>
-                        </div>
+        <form class="d-flex ride-search" role="search">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+            <button class="btn btn-outline-danger" type="reset">Reset</button>
+        </form>
+    <div class="row">
+        {% for ride in rides %}
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card h-100 d-flex flex-column">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-center">{{ ride.ride_name }}</h5>
+                    <p class="card-text text-center">{{ ride.theme_park }}</p>
+                    <img src="{{ ride.image_url }}" class="card-img-top">
+                    <div class="ride-info flex-grow-1">
+                        <p class="card-text"><strong>Type: </strong>{{ ride.type }}</p>
+                        <p class="card-text"><strong>Description: </strong>{{ ride.description }}</p>
                     </div>
+                    <div class="card-footer ratings-reviews-button text-muted">
+                        <a href="#" class="btn btn-primary">Click here to rate/review this ride</a>
+                     </div>
                 </div>
             </div>
-    {% endfor %}
         </div>
+        {% endfor %}
     </div>
-        
+</div>
+
 
 {% endblock %}
