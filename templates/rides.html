@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Ride Reviews Hub</title>
+</head>
+<body>
+    {% for ride in rides %}
+    {{ ride.ride_name }}<br>
+    {{ ride.theme_park }}<br>
+    {{ ride.description }}<br>
+    {{ ride.type }}<br>
+    {{ ride.height_restriction }}<br>
+    {% endfor %}
+</body>
+</html>
