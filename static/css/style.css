@@ -1,0 +1,15 @@
+body {
+    margin: 0 auto;
+}
+
+#home-title {
+    padding-top: 10px;
+}
+
+#header-image {
+    width: 100%;
+}
+
+#home-content {
+    padding: 20px;
+}

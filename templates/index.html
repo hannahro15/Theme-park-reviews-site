@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<body>  
+    <h1 id="home-title" class="text-center text-uppercase">Welcome to UK Theme Park Ride Reviews Hub!!</h1>
+ 
+    <div class="text-center">
+        <img id="header-image" src="{{ url_for('static', filename='images/park-home-image-min.webp') }}" alt="home-image">
+    </div>
+    <section id="home-content">
+        This website has information on theme parks rides around the uk and users are able to review the rides.
+    </section>
+</body>
+
+{% endblock %}
