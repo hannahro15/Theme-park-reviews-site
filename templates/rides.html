@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UK Ride Reviews Hub</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>I'm extending the base template!</h2>
+
     {% for ride in rides %}
     {{ ride.ride_name }}<br>
     {{ ride.theme_park }}<br>
@@ -13,5 +10,5 @@
     {{ ride.type }}<br>
     {{ ride.height_restriction }}<br>
     {% endfor %}
-</body>
-</html>
+
+{% endblock %}
