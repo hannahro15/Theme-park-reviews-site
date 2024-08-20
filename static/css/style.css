@@ -6,6 +6,13 @@ h1 {
     text-align: center;
 }
 
+.flashes h4 {
+    line-height: 2;
+    border: solid 1px black;
+    background-color: lightblue;
+    margin-top: 10px;
+}
+
 #home-title {
     padding-top: 10px;
 }
