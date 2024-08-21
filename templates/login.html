@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Register</h1>
+<h1>Login</h1>
 <div class="container">
-    <form method="POST" action="{{ url_for('register') }}">
+    <form method="POST" action="{{ url_for('login') }}">
         <div class="form-group">
           <label for="username">Username</label>
           <input type="text" class="form-control" id="username" name="username" aria-describedby="username" placeholder="Enter username" 
@@ -14,15 +14,15 @@
           minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
         </div>
         <br>
-        <button type="submit" class="btn btn-primary">Register</button>
+        <button type="submit" class="btn btn-primary">Login</button>
       </form>
   </div>
 
   <div class="row">
     <div>
         <p class="text-center">
-           Already Registered? 
-           <a href="{{ url_for('login') }}">Log In</a>
+           New here? 
+           <a href="{{ url_for('register') }}">Register Account</a>
         </p>
     </div>
   </div>
