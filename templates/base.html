@@ -43,9 +43,14 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Reviews</a>
             </li>
+            {% if session.user %}
             <li class="nav-item">
               <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+            </li>
+            {% else %}
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
@@ -56,6 +61,7 @@
                 <li><a class="dropdown-item" href="{{ url_for('login') }}">Login</a></li>
               </ul>
             </li>
+            {% endif %}
           </ul>
         </div>
       </div>
