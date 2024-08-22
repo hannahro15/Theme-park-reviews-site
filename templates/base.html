@@ -40,8 +40,15 @@
                 <li><a class="dropdown-item" href="#">Thorpe Park</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Reviews</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Reviews
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="">View All Ride Reviews</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('add_review') }}">Write a Review</a></li>
+              </ul>
             </li>
             {% if session.user %}
             <li class="nav-item">

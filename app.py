@@ -29,6 +29,11 @@ def get_rides():
     return render_template("rides.html", rides=rides)
 
 
+@app.route("/add_review")
+def add_review():
+    return render_template("add_review.html")
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -99,7 +104,7 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
-    
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
