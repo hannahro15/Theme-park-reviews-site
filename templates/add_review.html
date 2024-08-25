@@ -3,7 +3,7 @@
 <h1>Write a review</h1>
 <p>Please write your review below about the relevant ride/theme park.</p>
 <div class="container">
-    <form>
+    <form method="POST" action="{{ url_for('add_review') }}">
         <div class="form-group">
           <label for="name">Name: </label>
           <input type="text" class="form-control" id="name" name="name" aria-describedby="name" placeholder="Please enter your name" 
@@ -12,35 +12,35 @@
         <div class="form-group">
           <label for="ride">Ride: </label>
           <input type="text" class="form-control" id="ride" name="ride" aria-describedby="ride" placeholder="Please enter the ride" 
-          minlength="5" maxlength="15" required>
+          minlength="4" maxlength="15" required>
         </div>
         <div class="form-group">
-            <label for="ride">Theme Park: </label>
-            <select class="form-select" aria-label="Default select example">
+            <label for="theme_park">Theme Park: </label>
+            <select class="form-select" type="text" id="theme_park" name="theme_park" aria-label="Large select example">
                 <option selected>Please select the Theme Park below</option>
-                <option value="1">Blackpool Pleasure Beach</option>
-                <option value="2">Alton Towers</option>
-                <option value="3">Thorpe Park</option>
+                <option value="Blackpool Pleasure Beach">Blackpool Pleasure Beach</option>
+                <option value="Alton Towers">Alton Towers</option>
+                <option value="Thorpe Park">Thorpe Park</option>
               </select>
           </div>
         <div class="form-group">
             <label for="rating">Rating: </label>
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" type="text" id="rating" name="rating" aria-label="Large select example">
                 <option selected>Please select your rating below</option>
-                <option value="1">1/5 - Poor</option>
-                <option value="2">2/5 - Below Average</option>
-                <option value="3">3/5 - Average</option>
-                <option value="4">4/5 - Above Average</option>
-                <option value="5">5/5 - Excellent</option>
+                <option value="1/5 - Poor">1/5 - Poor</option>
+                <option value="2/5 - Below Average">2/5 - Below Average</option>
+                <option value="3/5 - Average">3/5 - Average</option>
+                <option value="4/5 - Above Average" >4/5 - Above Average</option>
+                <option value="5/5 - Excellent">5/5 - Excellent</option>
               </select>
         </div>
         <div class="form-group">
-            <label for="comment" class="form-label">Please write your comment here: </label>
-            <textarea class="form-control" id="ride-comment" rows="3" placeholder="Please enter any comments here about the ride..."></textarea>
+            <label for="ride_comment" class="form-label" name="ride_comment">Please write your comment here: </label>
+            <textarea type="text" class="form-control" id="ride_comment" rows="3" placeholder="Please enter any comments here about the ride..."></textarea>
         </div>
         <div class="form-group">
-            <label for="comment" class="form-label">Any other comments about the theme park: </label>
-            <textarea class="form-control" id="park-comment" rows="3" placeholder="Please enter any other general comments here about the theme park..."></textarea>
+            <label for="other_comment" class="form-label" name="other_comment">Any other comments about the theme park: </label>
+            <textarea type="text" class="form-control" id="other_comment" rows="3" placeholder="Please enter any other general comments here about the theme park..."></textarea>
         </div>
         <br>
         <button type="submit" class="btn btn-primary">Submit Your Review</button>

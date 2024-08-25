@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>View all reviews</h1>
+    {% for review in reviews %}
+    <div class="review-container">
+        <p>{{ review.created_by }}</p>
+        <p>{{ review.ride }}</p>
+        <p>{{ review.theme_park }}</p>
+        <p>{{ review.rating }}</p>
+        <p>{{ review.ride_comment }}</p>
+        <p>{{ review.other_comment }}</p>
+    </div>
+    {% endfor %}
+</body>
+</html>
+
+{% endblock %}

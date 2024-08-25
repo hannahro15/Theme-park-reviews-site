@@ -29,10 +29,27 @@ def get_rides():
     return render_template("rides.html", rides=rides)
 
 
-@app.route("/add_review")
+@app.route("/add_review", methods=["GET", "POST"])
 def add_review():
+    if request.method == 'POST':
+        reviews = {
+            "created_by": session["user"],
+            "name" : request.form.get("name"),
+            "ride" : request.form.get("ride"),
+            "theme_park": request.form.get("theme_park"),
+            "rating": request.form.get("rating"),
+            "ride_comment": request.form.get("ride_comment"),
+            "other_comment": request.form.get("other_comment")
+        }
+        mongo.db.reviews.insert_one(reviews)
+        flash("Review succesfully added!")
+        return redirect(url_for("add_review"))
     return render_template("add_review.html")
 
+@app.route("/reviews", methods=["GET","POST"])
+def get_reviews():
+    reviews = mongo.db.reviews.find()
+    return render_template("reviews.html", reviews=reviews)
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
