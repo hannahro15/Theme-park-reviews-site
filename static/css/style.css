@@ -52,6 +52,10 @@
     border: solid 1px black;
 }
 
+.review-container p {
+    margin-bottom: 0;
+}
+
 @media only screen and (min-width: 580px) {
     .ride-search {
         width: 60%;

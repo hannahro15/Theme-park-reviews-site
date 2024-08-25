@@ -42,7 +42,7 @@ def add_review():
             "other_comment": request.form.get("other_comment")
         }
         mongo.db.reviews.insert_one(reviews)
-        flash("Review succesfully added!")
+        flash("Review Successfully Added!")
         return redirect(url_for("add_review"))
     return render_template("add_review.html")
 
