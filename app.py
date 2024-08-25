@@ -41,6 +41,7 @@ def add_review():
             "ride_comment": request.form.get("ride_comment"),
             "other_comment": request.form.get("other_comment")
         }
+        print("POST request form data:", request.form.to_dict())
         mongo.db.reviews.insert_one(reviews)
         flash("Review Successfully Added!")
         return redirect(url_for("add_review"))
