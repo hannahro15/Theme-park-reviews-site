@@ -46,6 +46,7 @@ def add_review():
         flash("Review Successfully Added!")
         return redirect(url_for("add_review"))
 
+    rides = mongo.db.rides.find().sort("ride_name", 1)
     return render_template("add_review.html")
 
 @app.route("/reviews", methods=["GET","POST"])
@@ -66,13 +67,12 @@ def edit_review(review_id):
             "other_comment": request.form.get("other_comment")
         }
         
-        mongo.db.reviews.update({"_id": ObjectId(review_id)}, submit)
+        mongo.db.reviews.update_one({"_id": ObjectId(review_id)}, {"$set": submit})
         flash("Review Successfully Updated!")
-        return redirect(url_for("reviews"))
+        return redirect(url_for("get_reviews"))
 
-    review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
-    rides = mongo.db.rides.find().sort("ride_name", 1)
-    return render_template("edit_review.html", review=review, rides=rides)
+    reviews = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
+    return render_template("edit_review.html", reviews=reviews)
 
 
 @app.route("/register", methods=["GET", "POST"])
