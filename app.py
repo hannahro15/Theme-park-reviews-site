@@ -41,10 +41,11 @@ def add_review():
             "ride_comment": request.form.get("ride_comment"),
             "other_comment": request.form.get("other_comment")
         }
-        print("POST request form data:", request.form.to_dict())
+        
         mongo.db.reviews.insert_one(reviews)
         flash("Review Successfully Added!")
         return redirect(url_for("add_review"))
+
     return render_template("add_review.html")
 
 @app.route("/reviews", methods=["GET","POST"])
@@ -54,9 +55,24 @@ def get_reviews():
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
+    if request.method == 'POST':
+        submit = {
+            "created_by": session["user"],
+            "name" : request.form.get("name"),
+            "ride" : request.form.get("ride"),
+            "theme_park": request.form.get("theme_park"),
+            "rating": request.form.get("rating"),
+            "ride_comment": request.form.get("ride_comment"),
+            "other_comment": request.form.get("other_comment")
+        }
+        
+        mongo.db.reviews.update({"_id": ObjectId(review_id)}, submit)
+        flash("Review Successfully Updated!")
+        return redirect(url_for("reviews"))
+
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
-    ride = mongo.db.rides.find().sort("ride_name", 1)
-    return render_template("edit_review.html", review=review, ride=ride)
+    rides = mongo.db.rides.find().sort("ride_name", 1)
+    return render_template("edit_review.html", review=review, rides=rides)
 
 
 @app.route("/register", methods=["GET", "POST"])
