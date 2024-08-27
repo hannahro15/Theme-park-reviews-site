@@ -19,7 +19,7 @@
         <p>{{ review.ride_comment }}</p>
         <p>{{ review.other_comment }}</p>
     {% if session.user|lower == review.created_by|lower %}
-    <a href="" type="button" class="btn btn-success">Done</a>
+    <a href="{{ url_for('delete_review', review_id=review._id) }}" type="button" class="btn btn-success">Delete</a>
     <a href="{{ url_for('edit_review', review_id=review._id) }}" type="button" class="btn btn-primary">Edit</a>
     {% endif %}
 </div>
