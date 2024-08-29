@@ -28,10 +28,17 @@ def get_rides():
     rides = mongo.db.rides.find()
     return render_template("rides.html", rides=rides)
 
+
 @app.route("/pleasure_beach")
 def pleasure_beach():
     rides = mongo.db.rides.find({"theme_park": "Blackpool Pleasure Beach"})
     return render_template("pleasure_beach.html", rides=rides)
+
+
+@app.route("/alton_towers")
+def alton_towers():
+    rides = mongo.db.rides.find({"theme_park": "Alton Towers"})
+    return render_template("alton_towers.html", rides=rides)
 
 
 @app.route("/search")
