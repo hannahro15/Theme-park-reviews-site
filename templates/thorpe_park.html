@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="text-center">Thorpe Park</h1>
+
+<div class="container">
+    <div class="row">
+        {% for ride in rides %}
+        <div class="col-lg-3 col-md-4 col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{ ride.ride_name }}</h5>
+                    <p class="card-text text-center">{{ ride.theme_park }}</p>
+                    <img src="{{ ride.image_url }}" class="card-img-top">
+                    <div class="ride-info">
+                        <p class="card-text"><strong>Type: </strong>{{ ride.type }}</p>
+                        <p class="card-text"><strong>Description: </strong>{{ ride.description }}</p>
+                    </div>
+                    <div class="ratings-reviews-button">
+                        <a href="{{ url_for('add_review') }}" class="btn btn-primary">Click here to write a review</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

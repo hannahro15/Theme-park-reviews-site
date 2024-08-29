@@ -41,12 +41,17 @@ def alton_towers():
     return render_template("alton_towers.html", rides=rides)
 
 
+@app.route("/thorpe_park")
+def thorpe_park():
+    rides = mongo.db.rides.find({"theme_park": "Thorpe Park"})
+    return render_template("thorpe_park.html", rides=rides)
+
+
 @app.route("/search")
 def search():
     query= request.form.get("query")
     rides = list(mongo.db.rides.find({"$text": {"$search": query}}))
     return render_template("rides.html", rides=rides)
-
 
 
 @app.route("/add_review", methods=["GET", "POST"])
