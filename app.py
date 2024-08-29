@@ -25,8 +25,16 @@ def home():
 
 @app.route("/get_rides")
 def get_rides():
-    rides = mongo.db.rides.find().sort("ride_name", 1)
+    rides = mongo.db.rides.find()
     return render_template("rides.html", rides=rides)
+
+
+@app.route("/search")
+def search():
+    query= request.form.get("query")
+    rides = list(mongo.db.rides.find({"$text": {"$search": query}}))
+    return render_template("rides.html", rides=rides)
+
 
 
 @app.route("/add_review", methods=["GET", "POST"])

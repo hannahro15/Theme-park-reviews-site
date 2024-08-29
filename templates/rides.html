@@ -2,10 +2,10 @@
 {% block content %}
 
 <h1 class="text-center">Theme Park Rides</h1>
-<form class="d-flex ride-search search-bar" role="search">
-    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success" type="submit">Search</button>
-    <button class="btn btn-outline-danger" type="reset">Reset</button>
+<form action="{{ url_for('search') }}" method = "POST" class="d-flex" role="search">
+    <input class="form-control" type="search" name="query" id="query" placeholder="Search" aria-label="Search" required>
+    <a href="{{ url_for('get_rides') }}" class="btn btn-danger">Reset</a>
+    <button type="submit" class="btn btn-success">Search</button>
 </form>
 
 <div class="container">
