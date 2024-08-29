@@ -3,8 +3,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-      
-
 
 .flashes h4 {
     line-height: 2;
@@ -29,15 +27,15 @@ body {
     width: 100%;
 }
 
+.card {
+    min-height: 40rem;
+    margin: 10px;
+}
+
 .ride-search {
     width: 100%;
     margin: 0 auto;
     margin-bottom: 10px;
-}
-
-.card {
-    margin: 10px;
-    height: 38rem;
 }
 
 .card-img-top {
@@ -57,11 +55,16 @@ body {
 }
 
 .review-container {
-    border: solid 1px black;
+    border: double 5px black;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .review-container p {
     margin-bottom: 0;
+    padding: 5px;
+    margin: 0 auto;
+    margin-left: 20px;
 }
 
 footer {
