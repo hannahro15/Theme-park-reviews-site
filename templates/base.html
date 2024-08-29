@@ -16,7 +16,7 @@
 <body>
 
   <header>
-    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-sm bg-dark border-bottom border-body text-right" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="{{ url_for('home')}}">UK Rides Review Hub</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -24,7 +24,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{{ url_for('home')}}">Home</a>
             </li>
