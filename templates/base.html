@@ -35,6 +35,9 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="{{ url_for('get_rides') }}">View All Theme Park Rides</a></li>
+                {% if session.user|lower == "admin"|lower %}
+                <li><a class="dropdown-item" href="{{ url_for('manage_rides')}}">Manage Rides</a></li>
+                {% endif %}
                 <li><a class="dropdown-item" href="#">Blackpool Pleasure Beach</a></li>
                 <li><a class="dropdown-item" href="#">Alton Towers</a></li>
                 <li><a class="dropdown-item" href="#">Thorpe Park</a></li>

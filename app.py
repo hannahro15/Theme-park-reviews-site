@@ -25,7 +25,7 @@ def home():
 
 @app.route("/get_rides")
 def get_rides():
-    rides = mongo.db.rides.find()
+    rides = list(mongo.db.rides.find()).sort("ride_name", 1)
     return render_template("rides.html", rides=rides)
 
 
