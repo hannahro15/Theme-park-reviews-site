@@ -36,11 +36,21 @@ For my Milestone 3 project I am creating a reviews site for theme parks on a dat
 ## User Stories
 
 * As a user I should be able to find out the purpose of the website and what it is about from the home page.
-* As a user I should be able to see a list of rides and search for them on the rides page.
-* As a user, on each ride container I should be able to click open a link to a modal with rating/reviewing rides form for it to be submitted to the database and the reviews should available to read on the website somewhere.
+* As a user I should be able to see a list of rides and on the all rides page and search for them.
+* As a user, on each ride container I should be able to click open a link to a modal with rating/reviewing rides form for  it to be submitted to the database, and the reviews should available to read on the 'Reviews' page.
+* As a user I should be able to write a review on the 'Write a Review Page' and be able to submit it.
+* As a user on the Reviews page, I should be able to add, edit or delete my review.
 * As a user I should be able to register an account.
 * As a user I should be able to login to my account.
 * As a user I expect the website to be responsive on a range of screen sizes.
+* As an admin user I should be able to add, edit, or delete rides directly from the admin account on the website, rather than directly on the database on the MongoDB website.
+
+## Future Features
+
+- Admin page via website to add, edit, and delete rides.
+- Get the search functionality on the 'View all rides' page.
+- Add more rides and theme parks to the website.
+- Make the profile page for users and admin when logged in more attractive.
 
 # Deployment
 
@@ -49,7 +59,8 @@ Please find the steps below to deploy to Heroku.
 Install the following in your terminal first in VS Code/Gitpod.
 - pip3 freeze --local > requirements.txt
 - echo web: python app.py > Procfile
- You can check these have been added by looking at your files on the left hand side in VS Code/Gitpod.
+
+You can check these have been added by looking at your files on the left hand side in VS Code/Gitpod.
 
  Go to Heroku.com and implement the following stepsin this order:
  - On the home page, click 'New' and in the dropdown, click on 'Create a new app'.
