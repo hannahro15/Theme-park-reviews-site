@@ -2,7 +2,7 @@
 {% block content %}
 
 <h1 class="text-center">Theme Park Rides</h1>
-<form action="{{ url_for('search') }}" method = "POST" class="d-flex" role="search">
+<form action="{{ url_for('search') }}" method="POST" class="ride-search d-flex col-8" role="search">
     <input class="form-control" type="search" name="query" id="query" placeholder="Search" aria-label="Search" required>
     <a href="{{ url_for('get_rides') }}" class="btn btn-danger">Reset</a>
     <button type="submit" class="btn btn-success">Search</button>
@@ -22,7 +22,7 @@
                         <p class="card-text"><strong>Description: </strong>{{ ride.description }}</p>
                     </div>
                     <div class="ratings-reviews-button">
-                        <a href="{{ url_for('add_review') }}" class="btn btn-primary">Click here to write a review</a>
+                        <a href="{{ url_for('add_review') }}">Click here to write a review</a>
                     </div>
                 </div>
             </div>
