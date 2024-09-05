@@ -47,9 +47,9 @@ def thorpe_park():
     return render_template("thorpe_park.html", rides=rides)
 
 
-@app.route("/search")
+@app.route("/search", methods=["GET"])
 def search():
-    query= request.form.get("ride")
+    query= request.args.get("query")
     rides = list(mongo.db.rides.find({"$text": {"$search": query}}))
     return render_template("rides.html", rides=rides)
 
