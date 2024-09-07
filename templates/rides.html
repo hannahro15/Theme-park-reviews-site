@@ -3,7 +3,8 @@
 
 <h1 class="text-center">Theme Park Rides</h1>
 <form action="{{ url_for('search') }}" method="GET" class="ride-search d-flex col-8" role="search">
-    <input class="form-control" type="search" name="query" id="query" placeholder="Search" aria-label="Search" placeholder="Search for rides..." required>
+    <input class="form-control" type="search" name="query" id="query" placeholder="Search" aria-label="Search"
+        placeholder="Search for rides..." required>
     <a href="{{ url_for('get_rides') }}" class="btn btn-danger">Reset</a>
     <button type="submit" class="btn btn-success">Search</button>
 </form>
@@ -21,8 +22,29 @@
                         <p class="card-text"><strong>Type: </strong>{{ ride.type }}</p>
                         <p class="card-text"><strong>Description: </strong>{{ ride.description }}</p>
                     </div>
-                    <div class="ratings-reviews-button">
-                        <a href="{{ url_for('add_review') }}">Click here to write a review</a>
+                    <!-- Button trigger modal -->
+                    <button class="ratings-reviews-button" type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Click here to review this ride
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
                     </div>
                 </div>
             </div>
