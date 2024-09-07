@@ -32,6 +32,10 @@ body {
     margin: 10px;
 }
 
+.form-group {
+    padding: 5px;
+}
+
 .ride-search {
     margin: 0 auto;
 }
