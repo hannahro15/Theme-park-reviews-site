@@ -23,15 +23,15 @@
                         <p class="card-text"><strong>Description: </strong>{{ ride.description }}</p>
                     </div>
                     <!-- Button trigger modal -->
-                    <button class="ratings-reviews-button" type="button" class="btn btn-secondary" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">
+                    <button type="button" class="btn btn-primary ratings-reviews-button" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop{{ride._id}}">
                         Click here to review this ride
                     </button>
                 </div>
             </div>
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <div class="modal fade" id="staticBackdrop{{ride._id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -71,7 +71,6 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Understood</button>
                     </div>
                 </div>
             </div>
