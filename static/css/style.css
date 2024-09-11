@@ -4,6 +4,10 @@ body {
     flex-direction: column;
 }
 
+h3 {
+    font-size: 50px;
+}
+
 .flashes h4 {
     line-height: 2;
     border: solid 1px black;

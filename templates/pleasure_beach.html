@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1 class="text-center">Blackpool Pleasure Beach</h1>
+<h3 class="text-center">Blackpool Pleasure Beach</h3>
 
 <div class="container">
     <div class="row">
@@ -11,13 +11,13 @@
                 <div class="card-body">
                     <h5 class="card-title text-center">{{ ride.ride_name }}</h5>
                     <p class="card-text text-center">{{ ride.theme_park }}</p>
-                    <img src="{{ ride.image_url }}" class="card-img-top">
+                    <img src="{{ ride.image_url }}" class="card-img-top" alt="ride-image">
                     <div class="ride-info">
                         <p class="card-text"><strong>Type: </strong>{{ ride.type }}</p>
                         <p class="card-text"><strong>Description: </strong>{{ ride.description }}</p>
                     </div>
                      <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary ratings-reviews-button" data-bs-toggle="modal"
+                    <button class="btn btn-primary ratings-reviews-button" data-bs-toggle="modal"
                      data-bs-target="#staticBackdrop{{ride._id}}">
                      Click here to review this ride
                     </button>
@@ -47,7 +47,7 @@
                           </div>
                         <div class="form-group">
                             <label for="rating"><strong>Rating: </strong></label>
-                            <select class="form-select" type="text" id="rating" name="rating" aria-label="Large select example">
+                            <select class="form-select" id="rating" name="rating" aria-label="Large select example">
                                 <option selected>Please select your rating below</option>
                                 <option value="1/5 - Poor">1/5 - Poor</option>
                                 <option value="2/5 - Below Average">2/5 - Below Average</option>
@@ -58,14 +58,14 @@
                         </div>
                         <div class="form-group">
                             <label for="ride_comment" class="form-label" ><strong>Please write your comment here:</strong></label>
-                            <textarea type="text" class="form-control" id="ride_comment" name="ride_comment" rows="3" placeholder="Please enter any comments here about the ride..."></textarea>
+                            <textarea class="form-control" id="ride_comment" name="ride_comment" rows="3" placeholder="Please enter any comments here about the ride..."></textarea>
                         </div>
                         <br>
                         <button type="submit" class="btn btn-primary">Submit Your Review</button>
                       </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

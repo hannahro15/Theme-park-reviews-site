@@ -14,7 +14,6 @@
 </head>
 
 <body>
-
   <header>
     <nav class="navbar navbar-expand-sm bg-dark border-bottom border-body text-right" data-bs-theme="dark">
       <div class="container-fluid">
@@ -75,52 +74,51 @@
     </nav>
   </header>
 
-  <section>
+  <div>
     <!-- flash messages -->
     {% with messages = get_flashed_messages() %}
-      {% if messages %}
-        {% for message in messages %}
-          <div class="row flashes">
-            <h4 class="text-center">{{ message }}</h4>
-          </div>
-        {% endfor %}
-      {% endif %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="row flashes">
+      <h4 class="text-center">{{ message }}</h4>
+    </div>
+    {% endfor %}
+    {% endif %}
     {% endwith %}
-  </section>
+  </div>
 
   <main class="container">
     {% block content %}
     {% endblock %}
   </main>
-    <footer>
-      <!--Logo-->
-      <a href="{{ url_for('home') }}">
-          <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="park-logo">
-      </a>
-      <!--Social links-->
-      <section class="social-container">
-          <div id="social-links">
-              <h2 class="social-title text-uppercase">Social Media Links</h2>
-              <a href="https://www.facebook.com" target="_blank" aria-label="Link to Facebook page">
-                  <i class="fa-brands fa-facebook"></i>
-              </a>
-              <a href="https://www.twitter.com" target="_blank" aria-label="Link to Twitter page">
-                  <i class="fa-brands fa-twitter"></i>
-              </a>
-              <a href="https://www.instagram.com" target="_blank" aria-label="Link to Instagram page">
-                  <i class="fa-brands fa-instagram"></i>
-              </a>
-              <a href="https://www.youtube.com" target="_blank" aria-label="Link to Youtube channel">
-                  <i class="fa-brands fa-youtube"></i>
-              </a>
-          </div>
-          <div id="copyright-statement">
-              <p><em id="copyright">Copyright @ 2024 | UK Rides Review Hub | All Rights Reserved.</em></p>
-          </div>
-      </section>
-  </footer>
-  
 
+  <footer>
+    <!--Logo-->
+    <a href="{{ url_for('home') }}">
+      <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="park-logo">
+    </a>
+    <!--Social links-->
+    <section class="social-container">
+      <div id="social-links">
+        <h4 class="social-title text-uppercase">Social Media Links</h4>
+        <a href="https://www.facebook.com" target="_blank" aria-label="Link to Facebook page">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank" aria-label="Link to Twitter page">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" aria-label="Link to Instagram page">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" aria-label="Link to Youtube channel">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </div>
+      <div id="copyright-statement">
+        <p><em id="copyright">Copyright @ 2024 | UK Rides Review Hub | All Rights Reserved.</em></p>
+      </div>
+    </section>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
