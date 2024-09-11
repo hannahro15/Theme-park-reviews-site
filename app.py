@@ -1,7 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template, 
-    redirect, request, session, url_for)
+    Flask, flash, render_template, redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -49,7 +48,7 @@ def thorpe_park():
 
 @app.route("/search", methods=["GET"])
 def search():
-    query= request.args.get("query")
+    query = request.args.get("query")
     rides = list(mongo.db.rides.find({"$text": {"$search": query}}))
     return render_template("rides.html", rides=rides)
 
@@ -64,8 +63,8 @@ def add_review():
     if request.method == 'POST':
         reviews = {
             "created_by": session["user"],
-            "name" : request.form.get("name"),
-            "ride" : request.form.get("ride"),
+            "name": request.form.get("name"),
+            "ride": request.form.get("ride"),
             "theme_park": request.form.get("theme_park"),
             "rating": request.form.get("rating"),
             "ride_comment": request.form.get("ride_comment"),
@@ -79,7 +78,7 @@ def add_review():
     return render_template("add_review.html")
 
 
-@app.route("/reviews", methods=["GET","POST"])
+@app.route("/reviews", methods=["GET", "POST"])
 def get_reviews():
     reviews = mongo.db.reviews.find()
     return render_template("reviews.html", reviews=reviews)
@@ -90,17 +89,16 @@ def edit_review(review_id):
     if request.method == 'POST':
         reviews = {
             "created_by": session["user"],
-            "name" : request.form.get("name"),
-            "ride" : request.form.get("ride"),
+            "name": request.form.get("name"),
+            "ride": request.form.get("ride"),
             "theme_park": request.form.get("theme_park"),
             "rating": request.form.get("rating"),
             "ride_comment": request.form.get("ride_comment"),
             "other_comment": request.form.get("other_comment")
         }
-        
-        mongo.db.reviews.update_one({"_id": ObjectId(review_id)}, {"$set": submit})
+        mongo.db.reviews.update_one(
+            {"_id": ObjectId(review_id)}, {"$set": submit})
         flash("Review Successfully Updated!")
-        
     reviews = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     return render_template("edit_review.html", reviews=reviews)
 
@@ -116,12 +114,11 @@ def delete_review(review_id):
 def register():
     if request.method == "POST":
         # check if username exists in db
-        existing_user = mongo.db.users.find_one({"username": request.form.get("username").lower()})
-        
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
         if existing_user:
             flash("Username already exists!")
             return redirect(url_for("register"))
-        
         register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
@@ -131,7 +128,7 @@ def register():
         # put the new user in a 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
-        return redirect(url_for("profile", username = session["user"]))
+        return redirect(url_for("profile", username=session["user"]))
 
     return render_template("register.html")
 
@@ -146,11 +143,10 @@ def login():
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
-                    return redirect(url_for(
-                        "profile", username = session["user"]))
+                    existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(request.form.get("username")))
+                return redirect(url_for("profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -172,7 +168,6 @@ def profile(username):
 
     if session["user"]:
         return render_template("profile.html", username=username)
-    
     return redirect(url_for("login"))
 
 
@@ -186,5 +181,5 @@ def logout():
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
-            port=int(os.environ.get("PORT")),
-            debug=True)
+            port=int(os.environ.get("PORT")), debug=True)
+            
