@@ -30,14 +30,15 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Write a Review</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form method="POST" action="{{ url_for('add_review') }}">
                         <div class="form-group">
-                          <label for="name"><strong>Username: </strong></label>
-                        </div>
+                            <label for="name"><strong>Name: </strong></label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                          </div>
                         <div class="form-group">
                           <label for="ride"><strong>Ride: </strong>{{ ride.ride_name }}</label>
                         </div>
@@ -69,7 +70,7 @@
             </div>
         </div>
     </div>
-        {% endfor %}
+    {% endfor %}
     </div>
 </div>
 

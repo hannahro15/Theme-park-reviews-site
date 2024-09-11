@@ -4,11 +4,10 @@
 <p>Please write your review below about the relevant ride/theme park.</p>
 <div class="container">
     <form method="POST" action="{{ url_for('add_review') }}">
-        <div class="form-group">
-          <label for="name">Name: </label>
-          <input type="text" class="form-control" id="name" name="name" aria-describedby="name" placeholder="Please enter your name" 
-          minlength="5" maxlength="15" required>
-        </div>
+      <div class="form-group">
+       <label for="name"><strong>Name: </strong></label>
+       <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+     </div>
         <div class="form-group">
           <label for="ride">Ride: </label>
           <input type="text" class="form-control" id="ride" name="ride" aria-describedby="ride" placeholder="Please enter the ride" 

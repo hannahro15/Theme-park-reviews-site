@@ -88,7 +88,7 @@ def get_reviews():
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
     if request.method == 'POST':
-        submit = {
+        reviews = {
             "created_by": session["user"],
             "name" : request.form.get("name"),
             "ride" : request.form.get("ride"),
