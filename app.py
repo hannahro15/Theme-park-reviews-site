@@ -56,6 +56,11 @@ def search():
 
 @app.route("/add_review", methods=["GET", "POST"])
 def add_review():
+    # Handle for if the user is not logged in
+    if "user" not in session:
+        flash("You must be logged in as a user!")
+        return redirect(url_for('login'))
+    # Handle for if the user is logged in
     if request.method == 'POST':
         reviews = {
             "created_by": session["user"],
@@ -66,7 +71,6 @@ def add_review():
             "ride_comment": request.form.get("ride_comment"),
             "other_comment": request.form.get("other_comment")
         }
-        
         mongo.db.reviews.insert_one(reviews)
         flash("Review Successfully Added!")
         return redirect(url_for("add_review"))
