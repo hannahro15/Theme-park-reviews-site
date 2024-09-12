@@ -36,21 +36,81 @@ For my Milestone 3 project I am creating a reviews site for theme parks on a dat
 ## User Stories
 
 * As a user I should be able to find out the purpose of the website and what it is about from the home page.
-* As a user I should be able to see a list of rides and on the all rides page and search for them.
-* As a user, on each ride container I should be able to click open a link to a modal with rating/reviewing rides form for  it to be submitted to the database, and the reviews should available to read on the 'Reviews' page.
-* As a user I should be able to write a review on the 'Write a Review Page' and be able to submit it.
-* As a user on the Reviews page, I should be able to add, edit or delete my review.
+* As a user I should be able to see a list of rides and on the 'View all rides' page and search for them.
+* As a user, I shouldn't be able to submit a review unless I am logged in.
+* As a user I should be able to write a review on the 'Write a Review' Page and be able to submit it.
+* As A user, I should be able to write a review via the ride modals and it should submit and post it to the reviews page.
+* As a user on the 'Reviews' page, I should be able to add, edit or delete my own review/s.
+* As a user on the 'Reviews' page, I shouldn't be able to edit reviews other than ones of my own.
+* As a user, I should be able to read all the reviews on the reviews page.
 * As a user I should be able to register an account.
 * As a user I should be able to login to my account.
-* As a user I expect the website to be responsive on a range of screen sizes.
-* As an admin user I should be able to add, edit, or delete rides directly from the admin account on the website, rather than directly on the database on the MongoDB website.
+* As a user I expect the website to be responsive on a range of screen sizes so I am view it on different devices.
+
+
+# Technologies Used
+* HTML
+* CSS
+* Bootstrap Framework
+* Python
+* Flask Framework
+
+# Features
+
 
 ## Future Features
 
 - Admin page via website to add, edit, and delete rides.
-- Get the search functionality on the 'View all rides' page.
 - Add more rides and theme parks to the website.
 - Make the profile page for users and admin when logged in more attractive.
+
+# Credits and Acknowledgements
+
+## Credits
+
+### General
+
+* [Canva](https://www.canva.com/) - or creating and designing the logo
+
+* [Balsamiq](https://balsamiq.com/wireframes/) - for creating the wireframes
+
+* [Gitpod](https://www.gitpod.io/) - For working/completing on my project
+
+* [Github](https://github.com/) - To store my project online
+
+* [MongoDB](https://www.mongodb.com/) - To store the database info on
+
+* [Heroku](https://id.heroku.com/login) - For deploying the project and storing the env variables.
+
+* [RandomKeyGen](https://randomkeygen.com/) - For generating secret key contained in the env file.
+
+* [Rgb color code website](https://rgbcolorcode.com/) - For choosing colours
+
+* [Readme Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links) - For markdown documentation for the ReadMe
+
+* [ChatGPT](https://openai.com/index/chatgpt/) - For general debugging and spotting basic errors.
+
+• [Claude AI](https://claude.ai/new) - For general debugging and spotting basic errors.
+
+### Images
+
+* [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Images) - For the home image and all the ride images
+
+* [Font Awesome](https://fontawesome.com/icons) - For the icons used for the social links in the footer
+
+### Content/Documentation
+
+* For sorting out the whitespace under the footer issue I used some of the code on [this webpage](https://www.30secondsofcode.org/css/s/footer-at-the-bottom/). The website is called the 30 seconds of code website and the page is about the footer being on the bottom.
+
+* [W3 schools](https://www.w3schools.com/) - For general documentation
+
+* [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - For the relevant documentation
+
+* All content about the Theme Park rides on the website were written myself and from Google from my knowledge of visiting these theme parks in the past. 
+
+## Acknowledgements
+
+A big thanks to the support from my mentor at the Code Institute, my facilitator at the City of Bristol College, and the Code Institute Slack Community and Tutor Support for assistant on my Milestone 3 project.
 
 # Deployment
 
