@@ -65,6 +65,9 @@ h3 {
     border: double 5px black;
     margin-left: 100px;
     margin-right: 100px;
+    background-color: white;
+    padding: 5px;
+    margin-bottom: 5px;
 }
 
 .review-container p {
