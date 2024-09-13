@@ -60,16 +60,22 @@ For my Milestone 3 project I am creating a reviews site for theme parks on a dat
 
 ## Future Features
 
-- Admin page via website to add, edit, and delete rides.
 - Add more rides and theme parks to the website.
+- As I add more rides and theme parks to the website, I could then add in search functionality for each theme park.
+- Add in pagination.
+- Admin page via website to add, edit, and delete rides.
 - Make the profile page for users and admin when logged in more attractive.
 
 # Testing
 
 ## Bugs 
 ### Fixed Bugs
-- When submitting review via the ride modals, the ride and theme park names didn't show up in the reviews page, and said none. To fix this issue, I added in hidden input form fields for everything affected. Chat GPT told me this was the issue and I looked up the official documentation on W3 Schools afterwards. 
-The other small thing affected by this issue was me having to slightly amend a key, which I altered in the app.py file, from ride to ride_name so it was consistent for both reviews, and the rides.
+- When submitting a review via the ride modals, the ride and theme park names didn't show up in the reviews page, and said none. I tried doing an inner for loop with Jinja for reviews within the relevnat parts in the forms, but then the ride and theme park names didn't show up in the modal review forms, I also tried slightly amending other bits of Jinja to 'reviews.ride_name' rather than 'rides.ride_name' in the forms but that didn't solve the problem either.  After debugging it and finding out the issue with ChatGPT, it mentioned about adding in hidden input form fields for everything affected so I added that in. I looked up the official documentation afterwards of hidden input form fields to clarify my understand of it.
+- The other small issue affected by the above was I had to decided to amend a key, which I altered in the app.py file, from ride to ride_name so it was consistent for both reviews, and the rides collections. I also had to change this manually on the MongoDB website, and in the relevant template files as well.
+- When submitting the form it went to the 'Write a Review' page instead of the page where all the reviews were shown. I fixed this issue by amending the route name next the 'POST' method in the action bit in the relevant templates files to 'get_reviews' instead of add_review. This solved the issue, and it made it a better user experience.
+
+### Unfixed Bugs
+- When first entering the website, the images can take a few seconds to show on the ride pages. This may be because of it being a url for images which I used on the MongoDB website. 
 
 # Credits and Acknowledgements
 
