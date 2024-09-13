@@ -3,7 +3,7 @@
 <h3>Write a review</h3>
 <p>Please write your review below about the relevant ride/theme park.</p>
 <div class="container">
-    <form method="POST" action="{{ url_for('add_review') }}">
+    <form method="POST" action="{{ url_for('get_reviews') }}">
       <div class="form-group">
        <label for="name"><strong>Name: </strong></label>
        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
