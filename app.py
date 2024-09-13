@@ -64,7 +64,7 @@ def add_review():
         reviews = {
             "created_by": session["user"],
             "name": request.form.get("name"),
-            "ride": request.form.get("ride_name"),
+            "ride_name": request.form.get("ride_name"),
             "theme_park": request.form.get("theme_park"),
             "rating": request.form.get("rating"),
             "ride_comment": request.form.get("ride_comment"),

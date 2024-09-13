@@ -64,6 +64,13 @@ For my Milestone 3 project I am creating a reviews site for theme parks on a dat
 - Add more rides and theme parks to the website.
 - Make the profile page for users and admin when logged in more attractive.
 
+# Testing
+
+## Bugs 
+### Fixed Bugs
+- When submitting review via the ride modals, the ride and theme park names didn't show up in the reviews page, and said none. To fix this issue, I added in hidden input form fields for everything affected. Chat GPT told me this was the issue and I looked up the official documentation on W3 Schools afterwards. 
+The other small thing affected by this issue was me having to slightly amend a key, which I altered in the app.py file, from ride to ride_name so it was consistent for both reviews, and the rides.
+
 # Credits and Acknowledgements
 
 ## Credits
@@ -106,7 +113,7 @@ For my Milestone 3 project I am creating a reviews site for theme parks on a dat
 
 * [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - For the relevant documentation
 
-* [Hidden Input Fields ](https://www.w3schools.com/tags/att_input_type_hidden.asp) - Used for submitting the form when the rides and theme_park showed up as none in the review modal and said none on the reviews page.
+* [Hidden Input Fields ](https://www.w3schools.com/tags/att_input_type_hidden.asp) - Used for submitting the form when the rides and theme_park didn't show up in the review modal and then said none on the reviews page when submitting.
 
 * All content about the Theme Park rides on the website were written myself and from Google from my knowledge of visiting these theme parks in the past. 
 
