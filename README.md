@@ -106,6 +106,8 @@ For my Milestone 3 project I am creating a reviews site for theme parks on a dat
 
 * [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - For the relevant documentation
 
+* [Hidden Input Fields ](https://www.w3schools.com/tags/att_input_type_hidden.asp) - Used for submitting the form when the rides and theme_park showed up as none in the review modal and said none on the reviews page.
+
 * All content about the Theme Park rides on the website were written myself and from Google from my knowledge of visiting these theme parks in the past. 
 
 ## Acknowledgements
