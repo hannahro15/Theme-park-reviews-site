@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="text-center">View all reviews</h3>
-    {% for review in reviews %}
-    <div class="review-container">
-        <p><strong>{{ review.created_by }}</strong></p>
-        <p><strong>Ride: </strong>{{ review.ride_name }}</p>
-        <p><strong>Theme Park: </strong>{{ review.theme_park }}</p>
-        <p><strong>Rating: </strong>{{ review.rating }}</p>
-        <p><strong>Ride Comment: </strong>{{ review.ride_comment }}</p>
-        <p><strong>Other General Comments about the Theme Park: </strong>{{ review.other_comment }}</p>
-        {% if session.user|lower == review.created_by|lower %}
-        <a href="{{ url_for('delete_review', review_id=review._id) }}" class="btn btn-success">Delete</a>
-        <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn btn-primary">Edit</a>
-        {% endif %}
-    </div>
+<h3 class="text-center">View all reviews</h3>
+{% for review in reviews %}
+<div class="review-container">
+    <p><strong>{{ review.created_by }}</strong></p>
+    <p><strong>Ride: </strong>{{ review.ride_name }}</p>
+    <p><strong>Theme Park: </strong>{{ review.theme_park }}</p>
+    <p><strong>Rating: </strong>{{ review.rating }}</p>
+    <p><strong>Ride Comment: </strong>{{ review.ride_comment }}</p>
+    <p><strong>Other General Comments about the Theme Park: </strong>{{ review.other_comment }}</p>
+    {% if session.user|lower == review.created_by|lower %}
+    <a href="{{ url_for('delete_review', review_id=review._id) }}" class="btn btn-success">Delete</a>
+    <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn btn-primary">Edit</a>
+    {% endif %}
+</div>
 {% endfor %}
 
 {% endblock %}

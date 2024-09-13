@@ -17,63 +17,66 @@
                         <p class="card-text"><strong>Description: </strong>{{ ride.description }}</p>
                     </div>
                     <button class="btn btn-primary ratings-reviews-button" data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop{{ride._id}}">
-                    Click here to review this ride
+                        data-bs-target="#staticBackdrop{{ride._id}}">
+                        Click here to review this ride
                     </button>
                 </div>
             </div>
         </div>
-         <!-- Modal -->
-         <div class="modal fade" id="staticBackdrop{{ride._id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-         aria-labelledby="staticBackdropLabel" aria-hidden="true">
-         <div class="modal-dialog">
-             <div class="modal-content">
-                 <div class="modal-header">
-                     <h1 class="modal-title fs-5" id="staticBackdropLabel">Write a Review</h1>
-                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                 </div>
-                 <div class="modal-body">
-                     <form method="POST" action="{{ url_for('get_reviews') }}">
-                         <div class="form-group">
-                           <label for="name"><strong>Name: </strong></label>
-                           <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
-                         </div>
-                         <!-- Add hidden input for ride_name -->
-                         <input type="hidden" name="ride_name" value="{{ ride.ride_name }}">
-                         <!-- Add hidden input for theme_park -->
-                         <input type="hidden" name="theme_park" value="{{ ride.theme_park }}">
-                         <div class="form-group">
-                           <label for="ride"><strong>Ride: </strong>{{ ride.ride_name }}</label>
-                         </div>
-                         <div class="form-group">
-                             <label for="theme_park"><strong>Theme Park: </strong>{{ ride.theme_park }}</label>
-                           </div>
-                         <div class="form-group">
-                             <label for="rating"><strong>Rating: </strong></label>
-                             <select class="form-select" id="rating" name="rating" aria-label="Large select example">
-                                 <option selected>Please select your rating below</option>
-                                 <option value="1/5 - Poor">1/5 - Poor</option>
-                                 <option value="2/5 - Below Average">2/5 - Below Average</option>
-                                 <option value="3/5 - Average">3/5 - Average</option>
-                                 <option value="4/5 - Above Average" >4/5 - Above Average</option>
-                                 <option value="5/5 - Excellent">5/5 - Excellent</option>
-                               </select>
-                         </div>
-                         <div class="form-group">
-                             <label for="ride_comment" class="form-label" ><strong>Please write your comment here:</strong></label>
-                             <textarea class="form-control" id="ride_comment" name="ride_comment" rows="3" placeholder="Please enter any comments here about the ride..."></textarea>
-                         </div>
-                         <br>
-                         <button type="submit" class="btn btn-primary">Submit Your Review</button>
-                       </form>
-                 </div>
-                 <div class="modal-footer">
-                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                 </div>
-             </div>
-         </div>
-     </div>
-    {% endfor %}
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop{{ride._id}}" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Write a Review</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="POST" action="{{ url_for('get_reviews') }}">
+                            <div class="form-group">
+                                <label for="name"><strong>Name: </strong></label>
+                                <input type="text" class="form-control" id="name" name="name"
+                                    placeholder="Enter your name" required>
+                            </div>
+                            <!-- Add hidden input for ride_name -->
+                            <input type="hidden" name="ride_name" value="{{ ride.ride_name }}">
+                            <!-- Add hidden input for theme_park -->
+                            <input type="hidden" name="theme_park" value="{{ ride.theme_park }}">
+                            <div class="form-group">
+                                <p><strong>Ride: </strong>{{ ride.ride_name }}</p>
+                            </div>
+                            <div class="form-group">
+                                <p><strong>Theme Park: </strong>{{ ride.theme_park }}</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="rating"><strong>Rating: </strong></label>
+                                <select class="form-select" id="rating" name="rating" aria-label="Large select example">
+                                    <option selected>Please select your rating below</option>
+                                    <option value="1/5 - Poor">1/5 - Poor</option>
+                                    <option value="2/5 - Below Average">2/5 - Below Average</option>
+                                    <option value="3/5 - Average">3/5 - Average</option>
+                                    <option value="4/5 - Above Average">4/5 - Above Average</option>
+                                    <option value="5/5 - Excellent">5/5 - Excellent</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="ride_comment" class="form-label"><strong>Please write your comment
+                                        here:</strong></label>
+                                <textarea class="form-control" id="ride_comment" name="ride_comment" rows="3"
+                                    placeholder="Please enter any comments here about the ride..."></textarea>
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-primary">Submit Your Review</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
 </div>
 
