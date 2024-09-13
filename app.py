@@ -50,6 +50,10 @@ def thorpe_park():
 def search():
     query = request.args.get("query")
     rides = list(mongo.db.rides.find({"$text": {"$search": query}}))
+
+    if not rides:
+        flash("No rides found based on your query. Please try again, thank you!")
+
     return render_template("rides.html", rides=rides)
 
 
