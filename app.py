@@ -52,7 +52,7 @@ def search():
     rides = list(mongo.db.rides.find({"$text": {"$search": query}}))
 
     if not rides:
-        flash("No rides found based on your query. Please try again, thank you!")
+        flash("No rides found. Please try again!")
 
     return render_template("rides.html", rides=rides)
 
@@ -83,7 +83,7 @@ def add_review():
     return render_template("add_review.html")
 
 
-@app.route("/reviews", methods=["GET","POST"])
+@app.route("/reviews", methods=["GET", "POST"])
 def get_reviews():
     reviews = mongo.db.reviews.find()
     return render_template("reviews.html", reviews=reviews)
