@@ -62,6 +62,8 @@ For my Milestone 3 project I am creating a reviews site for theme parks on a dat
 
 - Add more rides and theme parks to the website.
 - As I add more rides and theme parks to the website, I could then add in search functionality for each theme park.
+- Make functionality so you can't delete or edit other people's reviews other than your own (related to 2nd unfixed bug below!)
+- A pop-up asking if confirm if you want to delete a review, or edit a review before actually doing it.
 - Add in pagination.
 - Admin page via website to add, edit, and delete rides.
 - Make the profile page for users and admin when logged in more attractive.
@@ -76,6 +78,7 @@ For my Milestone 3 project I am creating a reviews site for theme parks on a dat
 
 ### Unfixed Bugs
 - When first entering the website, the images can take a few seconds to show on the ride pages. This may be because of it being a url for images which I used on the MongoDB website. 
+- When anyone else other than myself signs up to write a review (This has been discovered via a review on the Peer Code review channel on Slack) it doesn't submit to the database or show on the all reviews page. It turns out the user shows up in the database in the 'Users' collection though when the register!
 
 # Credits and Acknowledgements
 
