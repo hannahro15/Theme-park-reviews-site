@@ -63,9 +63,10 @@ def add_review():
     if "user" not in session:
         flash("You must be logged in as a user!")
         return redirect(url_for('login'))
+
     # Handle for if the user is logged in
     if request.method == 'POST':
-        reviews = {
+        review = {
             "created_by": session["user"],
             "name": request.form.get("name"),
             "ride_name": request.form.get("ride_name"),
@@ -74,15 +75,15 @@ def add_review():
             "ride_comment": request.form.get("ride_comment"),
             "other_comment": request.form.get("other_comment")
         }
-        mongo.db.reviews.insert_one(reviews)
+        mongo.db.reviews.insert_one(review)
         flash("Review Successfully Added!")
-        return redirect(url_for("add_review"))
+        return redirect(url_for("get_reviews"))
 
     rides = mongo.db.rides.find().sort("ride_name", 1)
     return render_template("add_review.html")
 
 
-@app.route("/reviews", methods=["GET", "POST"])
+@app.route("/reviews", methods=["GET","POST"])
 def get_reviews():
     reviews = mongo.db.reviews.find()
     return render_template("reviews.html", reviews=reviews)
@@ -91,18 +92,20 @@ def get_reviews():
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
     if request.method == 'POST':
-        reviews = {
+        edited_review = {
             "created_by": session["user"],
             "name": request.form.get("name"),
-            "ride": request.form.get("ride"),
+            "ride_name": request.form.get("ride_name"),
             "theme_park": request.form.get("theme_park"),
             "rating": request.form.get("rating"),
             "ride_comment": request.form.get("ride_comment"),
             "other_comment": request.form.get("other_comment")
         }
         mongo.db.reviews.update_one(
-            {"_id": ObjectId(review_id)}, {"$set": submit})
+            {"_id": ObjectId(review_id)}, {"$set": edited_review})
         flash("Review Successfully Updated!")
+        return redirect(url_for("get_reviews"))
+
     reviews = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     return render_template("edit_review.html", reviews=reviews)
 
