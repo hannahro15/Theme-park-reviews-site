@@ -1,6 +1,11 @@
 # UK Rides Hub (A theme park database and reviews site)
 
-For my Milestone 3 project I am creating a reviews site for theme parks on a database using Mongodb.
+For my Milestone 3 project I am creating a reviews site for theme parks on a database using MongoDB.
+
+The project is a website where users can submit theme park ride reviews to the website using CRUD functionality. There is an all rides page where users can search for rides, and there are also individual theme park pages where it shows just the rides for that particular theme park, this is all via a "Theme Parks" dropdown tab in the navbar. There is also a write a review page, and a view all reviews page via a "Reviews" dropdown tab. As well as writing a review for a ride via the write a review page, you can also write a review via each indivdual ride modal on the theme park pages. 
+
+Live Link:
+https://theme-park-reviews-website-f1f235eaa19d.herokuapp.com/
 
 # UX
 
@@ -61,12 +66,13 @@ For my Milestone 3 project I am creating a reviews site for theme parks on a dat
 ## Future Features
 
 - Add more rides and theme parks to the website.
-- As I add more rides and theme parks to the website, I could then add in search functionality for each theme park.
-- Make functionality so you can't delete or edit other people's reviews other than your own (related to 2nd unfixed bug below!)
+- As more rides and theme parks are added in to the website, then I could add in search functionality for each theme park.
+- Make functionality so you can't delete or edit other people's reviews other than your own (related to 2nd unfixed bug mentioned below!)
 - A pop-up asking if confirm if you want to delete a review, or edit a review before actually doing it.
-- Add in pagination.
+- Add in pagination for if there a large number of rides on a page.
 - Admin page via website to add, edit, and delete rides.
 - Make the profile page for users and admin when logged in more attractive.
+- Show users own reviews to their own profile on the profile page.
 
 # Testing
 
@@ -78,7 +84,7 @@ For my Milestone 3 project I am creating a reviews site for theme parks on a dat
 
 ### Unfixed Bugs
 - When first entering the website, the images can take a few seconds to show on the ride pages. This may be because of it being a url for images which I used on the MongoDB website. 
-- When anyone else other than myself signs up to write a review (This has been discovered via a review on the Peer Code review channel on Slack) it doesn't submit to the database or show on the all reviews page. It turns out the user shows up in the database in the 'Users' collection though when the register!
+- When anyone else other than myself signs up to the website and writes a review (This has been discovered via a review on the Peer Code review channel on Slack) it doesn't submit to the database or show on the all reviews page. It is possible it shows up on the all reviews page from their side if they log in! It turns out the user shows up in the database in the 'Users' collection though on MongoDB when they have registered!
 
 # Credits and Acknowledgements
 
@@ -170,7 +176,7 @@ You can check these have been added by looking at your files on the left hand si
  - Heroku will receive code from Github and build app with the required packages. Hopefully once done the 'App has successfully been deployed message below' will appear.. 
  - Click 'View' to launch the new app.
 
-Your app has been successfully deployed now at this point and should automatically update everytime we make changes to our code in GitHub. The deployed link to this project is https://theme-park-reviews-website-f1f235eaa19d.herokuapp.com/
+The app has been successfully deployed now and it should automatically update any changes made to our code in GitHub. The deployed link to this project is https://theme-park-reviews-website-f1f235eaa19d.herokuapp.com/
 
 
 
