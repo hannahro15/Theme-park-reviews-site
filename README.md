@@ -105,24 +105,23 @@ https://theme-park-reviews-website-f1f235eaa19d.herokuapp.com/
 
 - Add more rides and theme parks to the website.
 - As more rides and theme parks are added in to the website, then I could add in search functionality for each theme park.
-- Make functionality so you can't delete or edit other people's reviews other than your own (related to 2nd unfixed bug mentioned below!)
 - A pop-up asking if confirm if you want to delete a review, or edit a review before actually doing it.
 - Add in pagination for if there a large number of rides on a page.
-- Admin page via website to add, edit, and delete rides.
+- Admin page via website to add, edit, and delete rides rather than directly on MongoDB database.
 - Make the profile page for users and admin when logged in more attractive.
-- Show users own reviews to their own profile on the profile page.
+- Show users own reviews to their profile page.
 
 # Testing
 
 ## Bugs 
 ### Fixed Bugs
-- When submitting a review via the ride modals, the ride and theme park names didn't show up in the reviews page, and said none. I tried doing an inner for loop with Jinja for reviews within the relevnat parts in the forms, but then the ride and theme park names didn't show up in the modal review forms, I also tried slightly amending other bits of Jinja to 'reviews.ride_name' rather than 'rides.ride_name' in the forms but that didn't solve the problem either.  After debugging it and finding out the issue with ChatGPT, it mentioned about adding in hidden input form fields for everything affected so I added that in. I looked up the official documentation afterwards of hidden input form fields to clarify my understand of it.
+- When submitting a review via the ride modals to begin with, the ride and theme park names didn't show up/transfer over to the reviews page, and said none. I tried doing an inner for loop with Jinja for reviews within the relevant parts in the forms, but then the ride and theme park names didn't show up in the modal review forms, I also tried slightly amending other bits of Jinja to 'reviews.ride_name' rather than 'rides.ride_name' in the forms but that didn't solve the problem either.  After debugging it and finding out the issue with ChatGPT, it mentioned about adding in hidden input form fields for everything affected so I added that in. I looked up the official documentation afterwards of hidden input form fields to clarify my understanding of it.
 - The other small issue affected by the above was I had to decided to amend a key, which I altered in the app.py file, from ride to ride_name so it was consistent for both reviews, and the rides collections. I also had to change this manually on the MongoDB website, and in the relevant template files as well.
 - When submitting the form it went to the 'Write a Review' page instead of the page where all the reviews were shown. I fixed this issue by amending the route name next the 'POST' method in the action bit in the relevant templates files to 'get_reviews' instead of add_review. This solved the issue, and it made it a better user experience.
+- Problem where other users submitting reviews didn't submit to the reviews page. I first discovered this via a Peer Code Review channel on Slack. It was fixed by checking and amending odd variable names, making sure it matched in the app.py files and also amending routes in odd files in the templates folder. I also created a second user account for myself to check this bug was fixed.
 
 ### Unfixed Bugs
 - When first entering the website, the images can take a few seconds to show on the ride pages. This may be because of it being a url for images which I used on the MongoDB website. 
-- When anyone else other than myself signs up to the website and writes a review (This has been discovered via a review on the Peer Code review channel on Slack) it doesn't submit to the database or show on the all reviews page. It is possible it shows up on the all reviews page from their side if they log in! It turns out the user shows up in the database in the 'Users' collection though on MongoDB when they have registered!
 
 # Credits and Acknowledgements
 
