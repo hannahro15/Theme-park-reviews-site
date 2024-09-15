@@ -1,4 +1,4 @@
-# UK Rides Hub (A theme park database and reviews site)
+# UK Rides Review Hub (A theme park database and reviews site)
 
 For my Milestone 3 project I am creating a reviews site for theme parks on a database using MongoDB.
 
@@ -11,32 +11,70 @@ https://theme-park-reviews-website-f1f235eaa19d.herokuapp.com/
 
 ## Wireframes
 
-### Home Page - Mobile
-![image](wireframes/home-page-mobile.png)
+<details>
+<summary>Home Page - Mobile</summary>
+<img src="wireframes/home-page-mobile.png" alt="Home Page - Mobile">
+</details>
 
-### Home Page - Desktop
-![image](wireframes/home-page-desktop.png)
+<details>
+<summary>Home Page - Desktop</summary>
+<img src="wireframes/home-page-desktop.png" alt="Home Page - Desktop">
+</details>
 
-### Rides Page - Mobile
-![image](wireframes/rides-page-mobile.png)
+<details>
+<summary>Rides Page - Mobile</summary>
+<img src="wireframes/rides-page-mobile.png" alt="Rides Page - Mobile">
+</details>
 
-### Rides Page - Desktop
-![image](wireframes/rides-page-desktop.png)
+<details>
+<summary>Rides Page - Desktop</summary>
+<img src="wireframes/rides-page-desktop.png" alt="Rides Page - Desktop">
+</details>
 
-### Registration Page - Mobile
-![image](wireframes/registration-page-mobile.png)
+<details>
+<summary>Registration Page - Mobile</summary>
+<img src="wireframes/registration-page-mobile.png" alt="Registration Page - Mobile">
+</details>
 
-### Registration Page - Desktop
-![image](wireframes/registration-page-desktop.png)
+<details>
+<summary>Registration Page - Desktop</summary>
+<img src="wireframes/registration-page-desktop.png" alt="Registration Page - Desktop">
+</details>
 
-### Login Page - Mobile
-![image](wireframes/login-page-mobile.png)
+<details>
+<summary>Login Page - Mobile</summary>
+<img src="wireframes/login-page-mobile.png" alt="Login Page - Mobile">
+</details>
 
-### Login Page - Desktop
-![image](wireframes/login-page-desktop.png)
+<details>
+<summary>Login Page - Desktop</summary>
+<img src="wireframes/login-page-desktop.png" alt="Login Page - Desktop">
+</details>
 
-### Ratings/Review Form (In the form of a Modal, similar for all screen sizes)
-![image](wireframes/login-page-desktop.png)
+<details>
+<summary>Ratings/Review Form (Via a modal in each ride container, similar for all screen sizes)</summary>
+<img src="wireframes/ride-review-modal-form.png" alt="Ride Modal Review Form">
+</details>
+
+<details>
+<summary>Write a Review Page - Mobile</summary>
+<img src="wireframes/write-a-review-page-mobile.png" alt="Write a Review Page - Mobile">
+</details>
+
+<details>
+<summary>Write a Review  Page - Desktop</summary>
+<img src="wireframes/write-a-review-page-desktop.png" alt="Write a Review Page - Desktop">
+</details>
+
+<details>
+<summary>Reviews Page - Mobile</summary>
+<img src="wireframes/reviews-page-mobile.png" alt="Reviews Page - Mobile">
+</details>
+
+<details>
+<summary>Reviews Page - Desktop</summary>
+<img src="wireframes/reviews-page-desktop.png" alt="Reviews Page - Desktop">
+</details>
 
 ## User Stories
 
