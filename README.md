@@ -90,6 +90,15 @@ https://theme-park-reviews-website-f1f235eaa19d.herokuapp.com/
 * As a user I should be able to login to my account.
 * As a user I expect the website to be responsive on a range of screen sizes so I am view it on different devices.
 
+##  Database Schema
+
+Please see below the Database Schema screenshot for my project. I used MongoDB Databse to build my project with.
+
+![screenshot](documentation/ms3-schema.png)
+
+As you can see some fields are related to each other. Some have the same fields, such as ride names and theme parks and are in both the Reviews and Rides collections. Users are also connected to reviews as users write a review. Rides are connected to reviews as it contains some of the same fields and values. 
+
+One field in two different collections have different field names but actually have the same values. It was 'created_by' in the Reviews collection and 'username' in the Users collection. They both contain the same username as a value but it made more sense on the Reviews page on the webesite to show 'created_by', and 'username' on the Register and Login pages.
 
 # Technologies Used
 * HTML
@@ -97,6 +106,7 @@ https://theme-park-reviews-website-f1f235eaa19d.herokuapp.com/
 * Bootstrap Framework
 * Python
 * Flask Framework
+
 
 # Features
 
