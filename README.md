@@ -110,6 +110,75 @@ One field in two different collections have different field names but actually h
 
 # Features
 
+## Home Page
+
+![screenshot]()
+
+This page is an home page which has an image of Blackpool Pleasure Beach with a beach in the background and introduces what the website is about.
+
+## View all Rides page
+
+![screenshot]()
+
+This page features all the rides on. There is a search bar that you can use to search for rides which makes it easier for the user to filter down to the ride they want to see and review. The page used Bootstrap card elements in a grid format and features a pop-up modal where you can fill out a review for that particular ride and then it gets submitted to the reviews page. It can only be submitted if a user is logged in. In the future if more rides are added to the website then pagination could be used to enhance the user experience.
+
+## Individual Rides pages for the individual theme parks.
+
+![Alton Towers]()
+
+![Blackpool Pleasure Beach]()
+
+![Thorpe Park]()
+
+Works similar to the 'View all Rides page" mentioned above but doesn't have a search bar there. These individual pages are for each theme park. If more rides got added to these pages then a search bar could be added at a later stage. They also feature a pop-up modal for a review for each ride.
+
+## Write a Review page
+
+![screenshot]()
+
+This page is a page for users to write a review. This is separate from the ride modal pop-up review form. If a user enters a website I thought it was a good idea to have a separate review page as well as the review from via the pop-up modals in the ride containers. Users cannot submit a review unless they are logged but they can fill out a form. If a user fills out a form and submits it if not logged it re-directs the user to the Login Page.
+
+## Pop up modal ride review page
+
+![screenshot]()
+
+Similar to the above.
+
+##  View all Reviews Page
+
+![screenshot]()
+
+The reviews page is a page where all the reviews are shown that users submit. There is an option on there to edit and delete reviews. If you click on the edit button it takes you back to the write a review page and you can re-fill out the review form and it automatically edits on the review page. Only users who are logged in can edit or delete their own reviews. 
+
+## Registration Page
+
+![screenshot]()
+
+This is a page where users can register for creating an account with.
+
+## Login Page
+
+![screenshot]()
+
+This is a page where users can login to their account. There is an option from this page to link to the register page if you aren't already registered.
+
+## Profile Page
+
+![screenshot]()
+
+A profile page that shows when the user is logged in to the website.
+
+## Navbar
+
+![screenshot]()
+
+This is the navbar which has the links to the relevant pages on the website. 
+
+## Footer
+
+![screenshot]()
+
+This is the footer that contains the logo and the social links.
 
 ## Future Features
 
@@ -132,6 +201,11 @@ One field in two different collections have different field names but actually h
 
 ### Unfixed Bugs
 - When first entering the website, the images can take a few seconds to show on the ride pages. This may be because of it being a url for images which I used on the MongoDB website. 
+
+## Validation
+I have been using the HTML, CSS and Python validators to validate my code.
+
+![screenshot]()
 
 # Credits and Acknowledgements
 
@@ -159,13 +233,21 @@ One field in two different collections have different field names but actually h
 
 * [ChatGPT](https://openai.com/index/chatgpt/) - For general debugging and spotting basic errors.
 
-• [Claude AI](https://claude.ai/new) - For general debugging and spotting basic errors.
+* [Claude AI](https://claude.ai/new) - For general debugging and spotting basic errors.
 
 ### Images
 
 * [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Images) - For the home image and all the ride images
 
 * [Font Awesome](https://fontawesome.com/icons) - For the icons used for the social links in the footer
+
+### Validators
+
+* [HTML Validator]() - HTML Validator
+
+* [CSS Validator]() - CSS Validator
+
+* [PEP8 Python Validator]() - Python Validator
 
 ### Content/Documentation
 
@@ -175,7 +257,7 @@ One field in two different collections have different field names but actually h
 
 * [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - For the relevant documentation
 
-* [Hidden Input Fields ](https://www.w3schools.com/tags/att_input_type_hidden.asp) - Used for submitting the form when the rides and theme_park didn't show up in the review modal and then said none on the reviews page when submitting.
+* [Hidden Input Fields ](https://www.w3schools.com/tags/att_input_type_hidden.asp) - When submitting the form and some of the fields didn't transfer over to the reviews page, advised by ChatGPT.
 
 * All content about the Theme Park rides on the website were written myself and from Google from my knowledge of visiting these theme parks in the past. 
 
@@ -209,7 +291,7 @@ You can check these have been added by looking at your files on the left hand si
  - Add in your variables from your env. files as key value pairs. (These are the IP, Port, Secret-Key, Mongo-URI (Won't  have connected to the Mongo-URI yet at this point), Mongo-DBName). Mongo-URI can be added at a later stage.
  - Go back and click on the Deploy tab. 
  
- Before we can connect it we need to push new files to the repository. Back in the terminal in your coding environment we need to add the following in the terminal:
+ Before the app can be connected, push the following new files below to the repository. Go back in the terminal in your coding environment and add the following:
  - git status
  - git add requirements.txt
  - git commit -m "Add requirements.txt file"
