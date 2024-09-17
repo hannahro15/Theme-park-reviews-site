@@ -22,6 +22,11 @@ def home():
     return render_template("index.html")
 
 
+@app.route("/404")
+def error_page():
+    return render_template("404.html")
+
+
 @app.route("/get_rides")
 def get_rides():
     rides = mongo.db.rides.find()
