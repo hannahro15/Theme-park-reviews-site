@@ -92,9 +92,9 @@ https://theme-park-reviews-website-f1f235eaa19d.herokuapp.com/
 
 ##  Database Schema
 
-Please see below the Database Schema screenshot for my project. I used MongoDB Databse to build my project with.
+Please see below the Database Schema screenshot for my project. I used MongoDB Database to build my project with.
 
-![screenshot](documentation/ms3-schema.png)
+![screenshot](documentation/schema.png)
 
 As you can see some fields are related to each other. Some have the same fields, such as ride names and theme parks and are in both the Reviews and Rides collections. Users are also connected to reviews as users write a review. Rides are connected to reviews as it contains some of the same fields and values. 
 
