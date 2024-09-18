@@ -34,11 +34,6 @@
                     </div>
                     <div class="modal-body">
                         <form method="POST" action="{{ url_for('add_review') }}">
-                            <div class="form-group">
-                                <label for="name"><strong>Name: </strong></label>
-                                <input type="text" class="form-control" id="name" name="name"
-                                    placeholder="Enter your name" required>
-                            </div>
                             <!-- Add hidden input for ride_name -->
                             <input type="hidden" name="ride_name" value="{{ ride.ride_name }}">
                             <!-- Add hidden input for theme_park -->
