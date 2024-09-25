@@ -11,7 +11,7 @@
     </div>
     <div class="form-group">
       <label for="theme_park">Theme Park: </label>
-      <select class="form-select" id="theme_park" name="theme_park" aria-label="Large select example">
+      <select class="form-select" id="theme_park" name="theme_park" aria-label="Large select example" required>
         <option selected>Please select the Theme Park below</option>
         <option value="Blackpool Pleasure Beach">Blackpool Pleasure Beach</option>
         <option value="Alton Towers">Alton Towers</option>
@@ -31,11 +31,11 @@
     </div>
     <div class="form-group">
       <label for="ride_comment" class="form-label">Please amend your ride comment here: </label>
-      <textarea class="form-control" id="ride_comment" name="ride_comment" rows="3">{{ review.ride_comment }}</textarea>
+      <textarea class="form-control" id="ride_comment" name="ride_comment" rows="3" required>{{ review.ride_comment }}</textarea>
     </div>
     <div class="form-group">
       <label for="other_comment" class="form-label">Please amend any other comments about the theme park: </label>
-      <textarea class="form-control" id="other_comment" name="other_comment" rows="3">{{ review.other_comment }}</textarea>
+      <textarea class="form-control" id="other_comment" name="other_comment" rows="3" required>{{ review.other_comment }}</textarea>
     </div>
     <br>
     <a href="{{ url_for ('get_reviews') }}" class="btn btn-danger">Cancel</a>
