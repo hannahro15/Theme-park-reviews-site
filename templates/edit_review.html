@@ -5,37 +5,34 @@
 <div class="container">
   <form method="POST" action="{{ url_for('edit_review', review_id=review._id) }}">
     <div class="form-group">
-      <label for="ride_name">Ride: </label>
-      <input type="text" class="form-control" id="ride_name" name="ride_name" value="{{ review.ride_name }}" aria-describedby="ride"
-        placeholder="Please enter the ride" minlength="4" maxlength="15" required>
-    </div>
+      <label for="ride_name">Ride:</label>
+      <input type="text" class="form-control" id="ride_name" name="ride_name" value="{{ review.ride_name }}" aria-describedby="ride_name"
+        placeholder="Please re-enter the ride" minlength="4" maxlength="15" required readonly>
+  </div>
     <div class="form-group">
-      <label for="theme_park">Theme Park: </label>
-      <select class="form-select" id="theme_park" name="theme_park" aria-label="Large select example" disabled required>
-        <option selected>Please select the Theme Park below</option>
-        <option value="Blackpool Pleasure Beach">Blackpool Pleasure Beach</option>
-        <option value="Alton Towers">Alton Towers</option>
-        <option value="Thorpe Park">Thorpe Park</option>
-      </select>
+      <label for="theme_park">Theme Park:</label>
+      <input type="text" class="form-control" id="theme_park" name="theme_park" value="{{ review.theme_park }}" aria-describedby="theme_park"
+            required readonly>
     </div>
     <div class="form-group">
       <label for="rating">Rating: </label>
-      <select class="form-select" id="rating" name="rating" aria-label="Large select example" disabled required>
-        <option selected>Please select your rating below</option>
-        <option value="1/5 - Poor">1/5 - Poor</option>
-        <option value="2/5 - Below Average">2/5 - Below Average</option>
-        <option value="3/5 - Average">3/5 - Average</option>
-        <option value="4/5 - Above Average">4/5 - Above Average</option>
-        <option value="5/5 - Excellent">5/5 - Excellent</option>
+      <select class="form-select" id="rating" name="rating" aria-label="Large select example" required>
+        <option value="1/5 - Poor" {% if review.rating == "1/5 - Poor" %} selected {% endif %}>1/5 - Poor</option>
+        <option value="2/5 - Below Average" {% if review.rating == "2/5 - Below Average" %} selected {% endif %}>2/5 - Below Average</option>
+        <option value="3/5 - Average" {% if review.rating == "3/5 - Average" %} selected {% endif %}>3/5 - Average</option>
+        <option value="4/5 - Above Average" {% if review.rating == "4/5 - Above Average" %} selected {% endif %}>4/5 - Above Average</option>
+        <option value="5/5 - Excellent" {% if review.rating == "5/5 - Excellent" %} selected {% endif %}>5/5 - Excellent</option>
       </select>
     </div>
     <div class="form-group">
       <label for="ride_comment" class="form-label">Please amend your ride comment here: </label>
-      <textarea class="form-control" id="ride_comment" name="ride_comment" rows="3" required>{{ review.ride_comment }}</textarea>
+      <textarea class="form-control" id="ride_comment" name="ride_comment" rows="3"
+        required>{{ review.ride_comment }}</textarea>
     </div>
     <div class="form-group">
       <label for="other_comment" class="form-label">Please amend any other comments about the theme park: </label>
-      <textarea class="form-control" id="other_comment" name="other_comment" rows="3" required>{{ review.other_comment }}</textarea>
+      <textarea class="form-control" id="other_comment" name="other_comment" rows="3"
+        required>{{ review.other_comment }}</textarea>
     </div>
     <br>
     <a href="{{ url_for ('get_reviews') }}" class="btn btn-danger">Cancel</a>

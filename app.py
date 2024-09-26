@@ -71,7 +71,7 @@ def add_review():
 
     # Handle for if the user is logged in
     if request.method == 'POST':
-        add_review = {
+        review = {
             "created_by": session["user"],
             "name": request.form.get("name"),
             "ride_name": request.form.get("ride_name"),
@@ -80,7 +80,7 @@ def add_review():
             "ride_comment": request.form.get("ride_comment"),
             "other_comment": request.form.get("other_comment")
         }
-        mongo.db.reviews.insert_one(add_review)
+        mongo.db.reviews.insert_one(review)
         flash("Review Successfully Added!")
         return redirect(url_for("get_reviews"))
 
@@ -96,7 +96,8 @@ def get_reviews():
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
-    
+    review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
+
     if request.method == 'POST':
         updated_review = {
             "created_by": session["user"],
@@ -112,7 +113,6 @@ def edit_review(review_id):
         flash("Review Successfully Updated!")
         return redirect(url_for("get_reviews"))
 
-    review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     return render_template("edit_review.html", review=review)
 
 
