@@ -142,4 +142,7 @@ i {
      margin: 0 auto;
      width: 70%;
     }
+    .card {
+        min-height: 35rem;
+    }
 }
