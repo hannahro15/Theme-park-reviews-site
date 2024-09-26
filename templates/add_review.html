@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 <h3>Write a review</h3>
-<p>Please write your review below about the relevant ride/theme park.</p>
+<p class="review-intro"><em>Please write your review below about the relevant ride/theme park if you know the name of the ride and the relevant theme park. Otherwise, please 
+  go to the 'Theme Park' dropdown tab on the navigation bar where you can view all rides or select the individual theme park. From those pages you can submit the 
+  same form as below directly from the ride containers via a 'Click here to review this ride' button which pops up with the form for that ride. </em></p>
 <div class="container">
   <form method="POST" action="{{ url_for('add_review') }}">
     <div class="form-group">
@@ -40,7 +42,7 @@
         placeholder="Please enter any other general comments here about the theme park..." required></textarea>
     </div>
     <br>
-    <button type="submit" class="btn btn-primary">Submit Your Review</button>
+    <button type="submit" class="btn btn-primary submit-review">Submit Your Review</button>
   </form>
 </div>
 
