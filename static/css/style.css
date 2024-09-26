@@ -7,7 +7,6 @@ body {
 
 h3 {
     font-size: 50px;
-    text-align: center;
 }
 
 .flashes h4 {
@@ -44,6 +43,7 @@ h3 {
 
 .ride-search {
     margin: 0 auto;
+    width: 100%;
 }
 
 .card-img-top {
@@ -84,6 +84,10 @@ h3, .review-intro {
     margin-bottom: 0;
     padding: 5px;
     margin: 0 auto;
+    margin-left: 20px;
+}
+
+.buttons-container {
     margin-left: 20px;
 }
 
@@ -131,8 +135,8 @@ i {
     color: white;
 }
 
-@media only screen and (min-width: 580px) {
+@media only screen and (min-width: 768px) {
     .ride-search {
-        width: 60%;
+     margin: 0 auto;
+     width: 70%;
     }
-  }

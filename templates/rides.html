@@ -5,8 +5,8 @@
 <form action="{{ url_for('search') }}" method="GET" class="ride-search d-flex col-8" role="search">
     <input class="form-control" type="search" name="query" id="query" aria-label="Search for Rides"
         placeholder="Search for rides..." required>
-    <a href="{{ url_for('get_rides') }}" class="btn btn-danger">Reset</a>
-    <button type="submit" class="btn btn-success">Search</button>
+        <a href="{{ url_for('get_rides') }}" class="btn btn-danger">Reset</a>
+        <button type="submit" class="btn btn-success">Search</button>
 </form>
 
 <div class="ride-container">
