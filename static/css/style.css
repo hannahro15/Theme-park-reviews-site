@@ -33,7 +33,7 @@ h3 {
 }
 
 .card {
-    height: 40rem;
+    max-height: 40rem;
     margin: 10px;
 }
 
@@ -47,7 +47,7 @@ h3 {
 }
 
 .ride-container img {
-    height: 200px;
+    max-height: 200px;
     object-fit: contain;
     width: 90%;
     margin-left: 10px;
