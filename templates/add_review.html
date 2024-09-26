@@ -5,12 +5,12 @@
 <div class="container">
   <form method="POST" action="{{ url_for('add_review') }}">
     <div class="form-group">
-      <label for="ride_name">Ride: </label>
+      <label for="ride_name"><strong>Ride: </strong></label>
       <input type="text" class="form-control" id="ride_name" name="ride_name" aria-describedby="ride_name"
         placeholder="Please enter the ride" minlength="4" maxlength="15" required>
     </div>
     <div class="form-group">
-      <label for="theme_park">Theme Park: </label>
+      <label for="theme_park"><strong>Theme Park: </strong></label>
       <select class="form-select" id="theme_park" name="theme_park" aria-label="Large select example" required>
         <option selected>Please select the Theme Park below</option>
         <option value="Blackpool Pleasure Beach">Blackpool Pleasure Beach</option>
@@ -19,7 +19,7 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="rating">Rating: </label>
+      <label for="rating"><strong>Rating: </strong></label>
       <select class="form-select" id="rating" name="rating" aria-label="Large select example" required>
         <option selected>Please select your rating below</option>
         <option value="1/5 - Poor">1/5 - Poor</option>
@@ -30,12 +30,12 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="ride_comment" class="form-label">Please write your comment here: </label>
+      <label for="ride_comment" class="form-label"><strong>Please write your comment here: </strong></label>
       <textarea class="form-control" id="ride_comment" name="ride_comment" rows="3"
         placeholder="Please enter any comments here about the ride..." required></textarea>
     </div>
     <div class="form-group">
-      <label for="other_comment" class="form-label">Any other comments about the theme park: </label>
+      <label for="other_comment" class="form-label"><strong>Any other comments about the theme park: </strong></label>
       <textarea class="form-control" id="other_comment" name="other_comment" rows="3"
         placeholder="Please enter any other general comments here about the theme park..." required></textarea>
     </div>

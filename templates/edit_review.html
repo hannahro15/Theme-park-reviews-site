@@ -5,17 +5,17 @@
 <div class="container">
   <form method="POST" action="{{ url_for('edit_review', review_id=review._id) }}">
     <div class="form-group">
-      <label for="ride_name">Ride:</label>
+      <label for="ride_name"><strong>Ride: </strong><em>(Please note: This ride can't be edited)</em></label>
       <input type="text" class="form-control" id="ride_name" name="ride_name" value="{{ review.ride_name }}" aria-describedby="ride_name"
         placeholder="Please re-enter the ride" minlength="4" maxlength="15" required readonly>
   </div>
     <div class="form-group">
-      <label for="theme_park">Theme Park:</label>
+      <label for="theme_park"><strong>Theme Park: </strong><em>(Please note: This theme park can't be edited)</em></label>
       <input type="text" class="form-control" id="theme_park" name="theme_park" value="{{ review.theme_park }}" aria-describedby="theme_park"
             required readonly>
     </div>
     <div class="form-group">
-      <label for="rating">Rating: </label>
+      <label for="rating"><strong>Please re-select the rating if you wish to: </strong></label>
       <select class="form-select" id="rating" name="rating" aria-label="Large select example" required>
         <option value="1/5 - Poor" {% if review.rating == "1/5 - Poor" %} selected {% endif %}>1/5 - Poor</option>
         <option value="2/5 - Below Average" {% if review.rating == "2/5 - Below Average" %} selected {% endif %}>2/5 - Below Average</option>
@@ -25,12 +25,12 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="ride_comment" class="form-label">Please amend your ride comment here: </label>
+      <label for="ride_comment" class="form-label"><strong>Please amend your ride comment here if you wish to: </strong></label>
       <textarea class="form-control" id="ride_comment" name="ride_comment" rows="3"
         required>{{ review.ride_comment }}</textarea>
     </div>
     <div class="form-group">
-      <label for="other_comment" class="form-label">Please amend any other comments about the theme park: </label>
+      <label for="other_comment" class="form-label"><strong>Please amend any other comments about the theme park if you wish to: </strong></label>
       <textarea class="form-control" id="other_comment" name="other_comment" rows="3"
         required>{{ review.other_comment }}</textarea>
     </div>
