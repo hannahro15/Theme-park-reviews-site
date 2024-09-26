@@ -205,7 +205,38 @@ This is the footer that contains the logo and the social links.
 ## Validation
 I have been using the HTML, CSS and Python validators to validate my code.
 
+HTML Validation Below:
+
+| Page      | Checked with HTML Validator? (Yes or No)  |
+| ------    | ------- |
+| base.html |  |
+| index.html |    |
+| profile.html |    |
+| register.html |  |
+| login.html |   |
+| rides.html |   |
+| alton_towers.html | |
+| pleasure_beach.html |   |
+| thorpe_park.html | |
+| add_review.html  | |
+| edit_review.html |  |
+| reviews.html |   |
+
 ![screenshot]()
+
+CSS Validation: 
+
+I can confirm that I have checked the code with the CSS Validator and that there are no errors.
+
+![screenshot]()
+
+Python Validation:
+
+I can confirm that I have checked the code with the PEP8 validator and that there are no errors.
+
+![screenshot]()
+
+I haven't used Javascript in this project so there is no need for validation for that on this project.
 
 # Credits and Acknowledgements
 
