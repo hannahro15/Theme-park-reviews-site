@@ -228,7 +228,7 @@ CSS Validation:
 
 I can confirm that I have checked the code with the CSS Validator and that there are no errors.
 
-![screenshot]()
+![screenshot](documentation/css-validation.png)
 
 Python Validation:
 
