@@ -26,6 +26,7 @@ h3 {
 
 #home-content {
     padding: 20px;
+    text-align: center;
 }
 
 .container {
@@ -145,5 +146,8 @@ i {
     }
     .card {
         min-height: 35rem;
+    }
+    #header-image {
+        width: 70%;
     }
 }
