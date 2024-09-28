@@ -1,3 +1,5 @@
+/* General */
+
 body {
     min-height: 100vh;
     display: flex;
@@ -7,92 +9,6 @@ body {
 
 h3 {
     font-size: 50px;
-}
-
-.flashes h4 {
-    line-height: 2;
-    border: solid 1px black;
-    background-color: lightblue;
-    margin-top: 10px;
-}
-
-#home-title {
-    padding-top: 10px;
-}
-
-#header-image {
-    width: 100%;
-}
-
-#home-content {
-    padding: 20px;
-    text-align: center;
-}
-
-.container {
-    width: 100%;
-}
-
-.card {
-    max-height: 40rem;
-    margin: 10px;
-}
-
-.form-group {
-    padding: 5px;
-}
-
-.ride-search {
-    margin: 0 auto;
-    width: 100%;
-}
-
-.ride-container img {
-    max-height: 200px;
-    object-fit: contain;
-    width: 90%;
-    height: auto;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.ride-info {
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-top: 10px;
-}
-
-.ratings-reviews-button {
-    margin: 10px;
-}
-
-h3, .review-intro {
-    margin-left: 20px;
-    text-align: center;
-}
-
-.submit-review, .edit-review, .cancel-edit-review {
-    margin-bottom: 10px;
-}
-
-.review-container {
-    border: double 5px black;
-    margin-left: 15px;
-    margin-right: 15px;
-    background-color: white;
-    padding: 5px;
-    margin-bottom: 5px;
-}
-
-.review-container p {
-    margin-bottom: 0;
-    padding: 5px;
-    margin: 0 auto;
-    margin-left: 20px;
-}
-
-.buttons-container {
-    margin-left: 20px;
 }
 
 footer {
@@ -138,6 +54,103 @@ i {
     font-size: 10px;
     color: white;
 }
+
+
+/* Pop up alerts/flashes */
+
+.flashes h4 {
+    line-height: 2;
+    border: solid 1px black;
+    background-color: lightblue;
+    margin-top: 10px;
+}
+
+/* Home page */
+
+#home-title {
+    padding-top: 10px;
+}
+
+#header-image {
+    width: 100%;
+}
+
+#home-content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Rides pages */
+
+.container {
+    width: 100%;
+}
+
+.card {
+    max-height: 40rem;
+    margin: 10px;
+}
+
+.form-group {
+    padding: 5px;
+}
+
+.ride-search {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.ride-container img {
+    max-height: 200px;
+    object-fit: contain;
+    width: 90%;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.ride-info {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
+.ratings-reviews-button {
+    margin: 10px;
+}
+
+/* Reviews pages */
+
+h3, .review-intro {
+    margin-left: 20px;
+    text-align: center;
+}
+
+.submit-review, .edit-review, .cancel-edit-review {
+    margin-bottom: 10px;
+}
+
+.review-container {
+    border: double 5px black;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: white;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.review-container p {
+    margin-bottom: 0;
+    padding: 5px;
+    margin: 0 auto;
+    margin-left: 20px;
+}
+
+.buttons-container {
+    margin-left: 20px;
+}
+
+/* Media Queries */
 
 @media only screen and (min-width: 768px) {
     .ride-search {
