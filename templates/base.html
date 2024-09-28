@@ -12,7 +12,7 @@
   <title>UK Rides Review Hub</title>
 </head>
 
-<body>
+<body class="d-flex flex-column">
   <header>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm bg-dark border-bottom border-body text-right" data-bs-theme="dark">
@@ -92,13 +92,13 @@
     {% endblock %}
   </main>
 
-  <footer>
+  <footer class="d-block w-100">
     <!--Logo-->
     <a href="{{ url_for('home') }}">
-      <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="park-logo">
+      <img class="logo h-auto d-block" src="{{ url_for('static', filename='images/logo.png') }}" alt="park-logo">
     </a>
     <!--Social links-->
-    <section class="social-container">
+    <section class="social-container d-block text-center">
       <div id="social-links">
         <h4 class="social-title text-uppercase">Social Media Links</h4>
         <a href="https://www.facebook.com" target="_blank" aria-label="Link to Facebook page">
