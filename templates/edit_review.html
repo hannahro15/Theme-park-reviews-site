@@ -18,7 +18,7 @@
     <div class="form-group">
       <label for="rating"><strong>Please re-select the rating if you wish to: </strong></label>
       <select class="form-select" id="rating" name="rating" aria-label="Large select example" required>
-        <option value="" disabled selected>Select a rating below</option>
+        <option value="" disabled>Select a rating below</option>
         <option value="1/5 - Poor" {% if review.rating == "1/5 - Poor" %} selected {% endif %}>1/5 - Poor</option>
         <option value="2/5 - Below Average" {% if review.rating == "2/5 - Below Average" %} selected {% endif %}>2/5 - Below Average</option>
         <option value="3/5 - Average" {% if review.rating == "3/5 - Average" %} selected {% endif %}>3/5 - Average</option>
