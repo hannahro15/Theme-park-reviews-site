@@ -116,6 +116,24 @@ One field in two different collections have different field names but actually h
 
 This page is an home page which has an image of Blackpool Pleasure Beach with a beach in the background and introduces what the website is about.
 
+## Registration Page
+
+![screenshot]()
+
+This is a page where users can register for creating an account with.
+
+## Login Page
+
+![screenshot]()
+
+This is a page where users can login to their account. There is an option from this page to link to the register page if you aren't already registered.
+
+## Profile Page
+
+![screenshot]()
+
+A profile page that shows when the user is logged in to the website.
+
 ## View all Rides page
 
 ![screenshot]()
@@ -138,7 +156,7 @@ Works similar to the 'View all Rides page" mentioned above but doesn't have a se
 
 This page is a page for users to write a review. This is separate from the ride modal pop-up review form. If a user enters a website I thought it was a good idea to have a separate review page as well as the review from via the pop-up modals in the ride containers. Users cannot submit a review unless they are logged but they can fill out a form. If a user fills out a form and submits it if not logged it re-directs the user to the Login Page.
 
-## Pop up modal ride review page
+## Pop up modal for a ride review page (within each ride page)
 
 ![screenshot]()
 
@@ -150,23 +168,11 @@ Similar to the above.
 
 The reviews page is a page where all the reviews are shown that users submit. There is an option on there to edit and delete reviews. If you click on the edit button it takes you back to the write a review page and you can re-fill out the review form and it automatically edits on the review page. Only users who are logged in can edit or delete their own reviews. 
 
-## Registration Page
+## Edit Review Page
+
+This is where you go to from the View all Reviews Page to edit your own review.
 
 ![screenshot]()
-
-This is a page where users can register for creating an account with.
-
-## Login Page
-
-![screenshot]()
-
-This is a page where users can login to their account. There is an option from this page to link to the register page if you aren't already registered.
-
-## Profile Page
-
-![screenshot]()
-
-A profile page that shows when the user is logged in to the website.
 
 ## Navbar
 
@@ -193,6 +199,7 @@ This is the footer that contains the logo and the social links.
 # Testing
 
 ## Bugs 
+
 ### Fixed Bugs
 - When submitting a review via the ride modals to begin with, the ride and theme park names didn't show up/transfer over to the reviews page, and said none. I tried doing an inner for loop with Jinja for reviews within the relevant parts in the forms, but then the ride and theme park names didn't show up in the modal review forms, I also tried slightly amending other bits of Jinja to 'reviews.ride_name' rather than 'rides.ride_name' in the forms but that didn't solve the problem either.  After debugging it and finding out the issue with ChatGPT, it mentioned about adding in hidden input form fields for everything affected so I added that in. I looked up the official documentation afterwards of hidden input form fields to clarify my understanding of it.
 - The other small issue affected by the above was I had to decided to amend a key, which I altered in the app.py file, from ride to ride_name so it was consistent for both reviews, and the rides collections. I also had to change this manually on the MongoDB website, and in the relevant template files as well.
@@ -237,6 +244,96 @@ I can confirm that I have checked the code with the PEP8 validator and that ther
 ![screenshot]()
 
 I haven't used Javascript in this project so there is no need for validation for that on this project.
+
+## Lighthouse Testing
+
+### Home Page - Mobile
+
+![screenshot]()
+
+### Home Page - Desktop
+
+![screenshot]()
+
+### Registration Page - Mobile
+
+![screenshot]()
+
+### Registration Page - Desktop
+
+![screenshot]()
+
+### Login Page - Mobile
+
+![screenshot]()
+
+### Login Page - Desktop
+
+![screenshot]()
+
+### Profile Page - Mobile
+
+![screenshot]()
+
+### Profile Page - Desktop
+
+![screenshot]()
+
+### View All Ride/Theme Parks Page - Mobile
+
+![screenshot]()
+
+### View All Ride/Theme Parks Page - Desktop
+
+![screenshot]()
+
+### Alton Towers Rides Page - Mobile
+
+![Alton Towers]()
+
+### Alton Towers Rides Page - Desktop
+
+![Alton Towers]()
+
+### Blackpool Pleasure Beach Rides Page - Mobile
+
+![Blackpool Pleasure Beach]()
+
+### Blackpool Pleasure Beach Rides Page - Desktop
+
+![Blackpool Pleasure Beach]()
+
+### Thorpe Park Rides Page - Mobile
+
+![Thorpe Park]()
+
+### Thorpe Park Rides Page - Desktop
+
+![Thorpe Park]()
+
+### View all Reviews Page - Mobile
+
+![screenshot]()
+
+### View all Reviews Page - Desktop
+
+![screenshot]()
+
+### Write a Review Page - Mobile
+
+![screenshot]()
+
+### Write a Review Page - Desktop
+
+![screenshot]()
+
+### Edit Review Page - Mobile
+
+![screenshot]()
+
+### Edit Review Page - Desktop
+
+![screenshot]()
 
 # Credits and Acknowledgements
 
