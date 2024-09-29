@@ -203,26 +203,26 @@ This is the footer that contains the logo and the social links.
 - When first entering the website, the images can take a few seconds to show on the ride pages. This may be because of it being a url for images which I used on the MongoDB website. 
 
 ## Validation
-I have been using the HTML, CSS and Python validators to validate my code.
+I have used the HTML, CSS and Python validators to validate my code.
 
-HTML Validation Below:
+HTML Validation Checks Below:
 
-| Page      | Checked with HTML Validator? (Yes or No)  |
+| Page      | Checked with HTML Validator with no errors (Yes or No)  |
 | ------    | ------- |
-| base.html |  |
-| index.html |    |
-| profile.html |    |
-| register.html |  |
-| login.html |   |
-| rides.html |   |
-| alton_towers.html | |
-| pleasure_beach.html |   |
-| thorpe_park.html | |
-| add_review.html  | |
-| edit_review.html |  |
-| reviews.html |   |
+| base.html | Yes |
+| index.html | Yes |
+| profile.html | Yes |
+| register.html | Yes |
+| login.html | Yes |
+| rides.html | Yes |
+| alton_towers.html | Yes |
+| pleasure_beach.html | Yes |
+| thorpe_park.html | Yes |
+| add_review.html  | Yes |
+| edit_review.html | Yes |
+| reviews.html | Yes |
 
-![screenshot]()
+![screenshot](documentation/html-validation.png)
 
 CSS Validation: 
 
