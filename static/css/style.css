@@ -2,7 +2,7 @@
 
 body {
     min-height: 100vh;
-    background-color: #F4E3C0;
+    background-color: #f7e4cc;
 }
 
 h3 {
@@ -78,7 +78,7 @@ i {
 }
 
 .card {
-    max-height: 40rem;
+    min-height: 35rem;
     margin: 10px;
 }
 
