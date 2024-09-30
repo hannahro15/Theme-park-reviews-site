@@ -228,6 +228,7 @@ HTML Validation Checks Below:
 | add_review.html  | Yes |
 | edit_review.html | Yes |
 | reviews.html | Yes |
+| 404.html | Yes |
 
 ![screenshot](documentation/html-validation.png)
 
@@ -249,91 +250,91 @@ I haven't used Javascript in this project so there is no need for validation for
 
 ### Home Page - Mobile
 
-![screenshot]()
+![screenshot](documentation/lighthouse-home-mobile.png)
 
 ### Home Page - Desktop
 
-![screenshot]()
+![screenshot](documentation/lighthouse-home-desktop.png)
 
 ### Registration Page - Mobile
 
-![screenshot]()
+![screenshot](documentation/lighthouse-reg-mobile.png)
 
 ### Registration Page - Desktop
 
-![screenshot]()
+![screenshot](documentation/lighthouse-reg-desktop.png)
 
 ### Login Page - Mobile
 
-![screenshot]()
+![screenshot](documentation/lighthouse-login-mobile.png)
 
 ### Login Page - Desktop
 
-![screenshot]()
+![screenshot](documentation/lighthouse-login-desktop.png)
 
 ### Profile Page - Mobile
 
-![screenshot]()
+![screenshot](documentation/lighthouse-profile-mobile.png)
 
 ### Profile Page - Desktop
 
-![screenshot]()
+![screenshot](documentation/lighthouse-profile-desktop.png)
 
 ### View All Ride/Theme Parks Page - Mobile
 
-![screenshot]()
+![screenshot](documentation/lighthouse-rides-mobile.png)
 
 ### View All Ride/Theme Parks Page - Desktop
 
-![screenshot]()
+![screenshot](documentation/lighthouse-reg-desktop.png)
 
 ### Alton Towers Rides Page - Mobile
 
-![Alton Towers]()
+![Alton Towers](documentation/lighthouse-alton-towers-mobile.png)
 
 ### Alton Towers Rides Page - Desktop
 
-![Alton Towers]()
+![Alton Towers](documentation/lighthouse-alton-towers-desktop.png)
 
 ### Blackpool Pleasure Beach Rides Page - Mobile
 
-![Blackpool Pleasure Beach]()
+![Blackpool Pleasure Beach](documentation/lighthouse-pleasure-beach-mobile.png)
 
 ### Blackpool Pleasure Beach Rides Page - Desktop
 
-![Blackpool Pleasure Beach]()
+![Blackpool Pleasure Beach](documentation/lighthouse-pleasure-beach-desktop.png)
 
 ### Thorpe Park Rides Page - Mobile
 
-![Thorpe Park]()
+![Thorpe Park](documentation/lighthouse-thorpe-park-mobile.png)
 
 ### Thorpe Park Rides Page - Desktop
 
-![Thorpe Park]()
+![Thorpe Park](documentation/lighthouse-thorpe-park-desktop.png)
 
 ### View all Reviews Page - Mobile
 
-![screenshot]()
+![screenshot](documentation/lighthouse-all-reviews-mobile.png)
 
 ### View all Reviews Page - Desktop
 
-![screenshot]()
+![screenshot](documentation/lighthouse-all-reviews-desktop.png)
 
 ### Write a Review Page - Mobile
 
-![screenshot]()
+![screenshot](documentation/lighthouse-write-review-mobile.png)
 
 ### Write a Review Page - Desktop
 
-![screenshot]()
+![screenshot](documentation/lighthouse-write-review-desktop.png)
 
 ### Edit Review Page - Mobile
 
-![screenshot]()
+![screenshot](documentation/lighthouse-edit-review-mobile.png)
 
 ### Edit Review Page - Desktop
 
-![screenshot]()
+![screenshot](documentation/lighthouse-edit-review-desktop.png)
 
 # Credits and Acknowledgements
 
