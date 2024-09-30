@@ -19,43 +19,51 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def home():
+    '''Function for rendering the home/index page.'''
     return render_template("index.html")
 
 
 @app.errorhandler(404)
 def page_not_found(e):
+    '''Function for rending the error 404 page.'''
     return render_template("404.html"), 404
 
 
 @app.route("/get_rides")
 def get_rides():
+    '''Function for retrieving all the rides.'''
     rides = mongo.db.rides.find()
     return render_template("rides.html", rides=rides)
 
 
 @app.route("/pleasure_beach")
 def pleasure_beach():
+    '''Function for filtering/rendering just rides from the Pleasure Beach.'''
     rides = mongo.db.rides.find({"theme_park": "Blackpool Pleasure Beach"})
     return render_template("pleasure_beach.html", rides=rides)
 
 
 @app.route("/alton_towers")
 def alton_towers():
+    '''Function for filtering/rendering just rides from Alton Towers.'''
     rides = mongo.db.rides.find({"theme_park": "Alton Towers"})
     return render_template("alton_towers.html", rides=rides)
 
 
 @app.route("/thorpe_park")
 def thorpe_park():
+    '''Function for filtering/rendering just rides from Thorpe Park.'''
     rides = mongo.db.rides.find({"theme_park": "Thorpe Park"})
     return render_template("thorpe_park.html", rides=rides)
 
 
 @app.route("/search", methods=["GET"])
 def search():
+    '''Function for searching for rides on the rides.html page.'''
+    # If rides found in search
     query = request.args.get("query")
     rides = list(mongo.db.rides.find({"$text": {"$search": query}}))
-
+    # If no rides available found in search
     if not rides:
         flash("No rides found. Please try again!")
 
@@ -64,6 +72,7 @@ def search():
 
 @app.route("/add_review", methods=["GET", "POST"])
 def add_review():
+    '''Function for adding reviews.'''
     # Handle for if the user is not logged in
     if "user" not in session:
         flash("You must be logged in as a user!")
@@ -90,12 +99,14 @@ def add_review():
 
 @app.route("/reviews", methods=["GET", "POST"])
 def get_reviews():
+    '''Function for retrieving all the reviews on one page.'''
     reviews = mongo.db.reviews.find()
     return render_template("reviews.html", reviews=reviews)
 
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
+    '''Function for editing reviews.'''
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
 
     if request.method == 'POST':
@@ -118,6 +129,7 @@ def edit_review(review_id):
 
 @app.route("/delete_review/<review_id>")
 def delete_review(review_id):
+    '''Function for deleting reviews.'''
     mongo.db.reviews.delete_one({"_id": ObjectId(review_id)})
     flash("Review Successfully Deleted!")
     return redirect(url_for("get_reviews"))
@@ -125,6 +137,7 @@ def delete_review(review_id):
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    '''Function for registeringan account.'''
     if request.method == "POST":
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
@@ -148,6 +161,7 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    '''Function for login in.'''
     if request.method == "POST":
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
@@ -175,6 +189,7 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    '''Function for rendering the profile page.'''
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -186,6 +201,7 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
+    '''Function for logging out.'''
     # remove user from session cookie
     flash("You have been logged out")
     session.pop("user")
