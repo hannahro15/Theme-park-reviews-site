@@ -242,11 +242,11 @@ Python Validation:
 
 I can confirm that I have checked the code with the PEP8 validator and that there are no errors.
 
-![screenshot]()
-
 I haven't used Javascript in this project so there is no need for validation for that on this project.
 
 ## Lighthouse Testing
+
+I have screenshots of my final lighthouse scores after editing things that have come up throughout the testing with Lighthouse. I used Google Lighthouse in a new browser window in 'Incognito Mode' to test this.
 
 ### Home Page - Mobile
 
