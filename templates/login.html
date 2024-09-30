@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <!-- Login Page -->
-<h3 class="text-center">Login</h3>
+<h3 class="text-center">Log In</h3>
 <div class="container">
   <form method="POST" action="{{ url_for('login') }}">
     <div class="form-group">
@@ -15,7 +15,7 @@
         minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
     </div>
     <br>
-    <button type="submit" class="btn btn-primary">Login</button>
+    <button type="submit" class="btn btn-primary" id="register-link">Login</button>
   </form>
 </div>
 
@@ -23,7 +23,7 @@
   <div>
     <p class="text-center">
       New here?
-      <a href="{{ url_for('register') }}">Register Account</a>
+      <a href="{{ url_for('register') }}" class="reg-log-link">Register Account</a>
     </p>
   </div>
 </div>

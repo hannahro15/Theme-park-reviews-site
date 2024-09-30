@@ -47,6 +47,12 @@ i {
     color: white;
 }
 
+/* Login / Register links */
+
+.reg-log-link{
+    color: black;
+}
+
 
 /* Pop up alerts/flashes */
 
