@@ -49,7 +49,7 @@ i {
 
 /* Login / Register links */
 
-.reg-log-link{
+.reg-log-link, .error-page-link {
     color: black;
 }
 
