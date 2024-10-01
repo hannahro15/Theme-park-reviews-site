@@ -80,6 +80,7 @@ https://theme-park-reviews-website-f1f235eaa19d.herokuapp.com/
 
 * As a user I should be able to find out the purpose of the website and what it is about from the home page.
 * As a user I should be able to see a list of rides and on the 'View all rides' page and search for them.
+* As a user I should be able to see rides on the individual theme park pages. 
 * As a user, I shouldn't be able to submit a review unless I am logged in.
 * As a user I should be able to write a review on the 'Write a Review' Page and be able to submit it.
 * As A user, I should be able to write a review via the ride modals and it should submit and post it to the reviews page.
@@ -89,6 +90,7 @@ https://theme-park-reviews-website-f1f235eaa19d.herokuapp.com/
 * As a user I should be able to register an account.
 * As a user I should be able to login to my account.
 * As a user I expect the website to be responsive on a range of screen sizes so I am view it on different devices.
+* As a user all social links work in the footer.
 
 ##  Database Schema
 
@@ -208,6 +210,7 @@ This is the footer that contains the logo and the social links.
 
 ### Unfixed Bugs
 - When first entering the website, the images can take a few seconds to show on the ride pages. This may be because of it being a url for images which I used on the MongoDB website. 
+- Small bug when filling out a form is that you have to manually select a theme park after writing down the ride in the previous field. This means unless you know the ride and the theme park it is from you just you could just make up any ride, and any theme park that goes along with it. To improve the user experience I decided to put a note on the write a review page to say if you don't know the ride and theme park to go to the rides pages to fill out the review forms from there. This prevents this sort of error. Also one would assume you would already know the rides and the theme parks they are in if you are writing reviews on them!
 
 ## Validation
 I have used the HTML, CSS and Python validators to validate my code.
@@ -335,6 +338,23 @@ I have screenshots of my final lighthouse scores after editing things that have 
 ### Edit Review Page - Desktop
 
 ![screenshot](documentation/lighthouse-edit-review-desktop.png)
+
+## Manual Testing
+
+| User Story | Tested and everything is ok |
+| As a user I should be able to find out the purpose of the website and what it is about from the home page.  | Yes |
+| As a user I should be able to see a list of rides and on the 'View all rides' page and search for them. | Yes |
+| As a user I should be able to see rides on the individual theme park pages. | Yes |
+| As a user, I shouldn't be able to submit a review unless I am logged in. | Yes |
+| As a user I should be able to write a review on the 'Write a Review' Page and be able to submit it. | Yes |
+| As A user, I should be able to write a review via the ride modals and it should submit and post it to the reviews page.| Yes |
+| As a user on the 'Reviews' page, I should be able to add, edit or delete my own review/s. | Yes |
+| As a user on the 'Reviews' page, I shouldn't be able to edit reviews other than ones of my own.  | Yes |
+| As a user, I should be able to read all the reviews on the reviews page. | Yes |
+| As a user I should be able to register an account. | Yes |
+| As a user I should be able to login to my account. | Yes |
+| As a user I expect the website to be responsive on a range of screen sizes so I am view it on different devices. | Yes |
+| As a user all social links work in the footer. | Yes |
 
 # Credits and Acknowledgements
 
