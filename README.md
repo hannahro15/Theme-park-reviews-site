@@ -342,6 +342,7 @@ I have screenshots of my final lighthouse scores after editing things that have 
 ## Manual Testing
 
 | User Story | Tested and everything is ok |
+| ------ | ------- |
 | As a user I should be able to find out the purpose of the website and what it is about from the home page.  | Yes |
 | As a user I should be able to see a list of rides and on the 'View all rides' page and search for them. | Yes |
 | As a user I should be able to see rides on the individual theme park pages. | Yes |
@@ -424,35 +425,35 @@ Install the following in your terminal first in VS Code/Gitpod.
 
 You can check these have been added by looking at your files on the left hand side in VS Code/Gitpod.
 
- Go to Heroku.com and implement the following stepsin this order:
- - On the home page, click 'New' and in the dropdown, click on 'Create a new app'.
- - Add app name (This name must be unique, and have all lower case letters. Also use minus/dash signs instead of spaces.)
- - Select Region  (Select the most relevant region, mine is Europe)
- - Click the button that says 'Create App'.
- - Click on the Deploy tab near the top of the screen.
- - Where is says Deployment Method click on Github.
- - Below that, search for your repo name and add that.
- - Click connect to the app.
+ Go to Heroku.com and implement the following steps in this order:
+ 1. On the home page, click 'New' and in the dropdown, click on 'Create a new app'.
+ 2. Add app name (This name must be unique, and have all lower case letters. Also use minus/dash signs instead of spaces.)
+ 3. Select Region  (Select the most relevant region, mine is Europe)
+ 4. Click the button that says 'Create App'.
+ 5. Click on the Deploy tab near the top of the screen.
+ 6. Where is says Deployment Method click on Github.
+ 7. Below that, search for your repo name and add that.
+ 8. Click connect to the app.
 
  Before clicking below on enable automatic deployment do the following:
- - Click on the settings tab
- - Click on reveal config vars.
- - Add in your variables from your env. files as key value pairs. (These are the IP, Port, Secret-Key, Mongo-URI (Won't  have connected to the Mongo-URI yet at this point), Mongo-DBName). Mongo-URI can be added at a later stage.
- - Go back and click on the Deploy tab. 
+ 1. Click on the settings tab
+ 2. Click on reveal config vars.
+ 3. Add in your variables from your env. files as key value pairs. (These are the IP, Port, Secret-Key, Mongo-URI (Won't  have connected to the Mongo-URI yet at this point), Mongo-DBName). Mongo-URI can be added at a later stage.
+ 4. Go back and click on the Deploy tab. 
  
  Before the app can be connected, push the following new files below to the repository. Go back in the terminal in your coding environment and add the following:
- - git status
- - git add requirements.txt
- - git commit -m "Add requirements.txt file"
- - git add Procfile
- - git commit -m "Add Procfile"
- - git push
+ 1. git status
+ 2. git add requirements.txt
+ 3. git commit -m "Add requirements.txt file"
+ 4. git add Procfile
+ 5. git commit -m "Add Procfile"
+ 6. git push
 
  Head back over to Heroku where the Deploy tab is.
- - Click 'Enable Automatic Deploys'
- - Click Deploy Branch. (Should be a main or master branch)
- - Heroku will receive code from Github and build app with the required packages. Hopefully once done the 'App has successfully been deployed message below' will appear.. 
- - Click 'View' to launch the new app.
+ 1. Click 'Enable Automatic Deploys'
+ 2. Click Deploy Branch. (Should be a main or master branch)
+ 3. Heroku will receive code from Github and build app with the required packages. Hopefully once done the 'App has successfully been deployed message below' will appear.. 
+ 4. Click 'View' to launch the new app.
 
 The app has been successfully deployed now and it should automatically update any changes made to our code in GitHub. The deployed link to this project is https://theme-park-reviews-website-f1f235eaa19d.herokuapp.com/
 
