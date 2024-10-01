@@ -114,59 +114,65 @@ One field in two different collections have different field names but actually h
 
 ## Home Page
 
-![screenshot]()
+![screenshot](documentation/home-page-screenshot.png)
 
 This page is an home page which has an image of Blackpool Pleasure Beach with a beach in the background and introduces what the website is about.
 
 ## Registration Page
 
-![screenshot]()
+![screenshot](documentation/register-screenshot.png)
 
 This is a page where users can register for creating an account with.
 
 ## Login Page
 
-![screenshot]()
+![screenshot](documentation/log-in-screenshot.png)
 
 This is a page where users can login to their account. There is an option from this page to link to the register page if you aren't already registered.
 
 ## Profile Page
 
-![screenshot]()
+![screenshot](documentation/profile-page-screenshot.png)
 
 A profile page that shows when the user is logged in to the website.
 
 ## View all Rides page
 
-![screenshot]()
+![screenshot](documentation/all-rides-screenshot.png)
 
 This page features all the rides on. There is a search bar that you can use to search for rides which makes it easier for the user to filter down to the ride they want to see and review. The page used Bootstrap card elements in a grid format and features a pop-up modal where you can fill out a review for that particular ride and then it gets submitted to the reviews page. It can only be submitted if a user is logged in. In the future if more rides are added to the website then pagination could be used to enhance the user experience.
 
 ## Individual Rides pages for the individual theme parks.
 
-![Alton Towers]()
+![Alton Towers](documentation/alton-towers-screenshot.png)
 
-![Blackpool Pleasure Beach]()
+![Blackpool Pleasure Beach](documentation/pleasure-beach-screenshot.png)
 
-![Thorpe Park]()
+![Thorpe Park](documentation/thorpe-park-screenshot.png)
 
 Works similar to the 'View all Rides page" mentioned above but doesn't have a search bar there. These individual pages are for each theme park. If more rides got added to these pages then a search bar could be added at a later stage. They also feature a pop-up modal for a review for each ride.
 
 ## Write a Review page
 
-![screenshot]()
+![screenshot](documentation/write-review-screenshot.png)
 
 This page is a page for users to write a review. This is separate from the ride modal pop-up review form. If a user enters a website I thought it was a good idea to have a separate review page as well as the review from via the pop-up modals in the ride containers. Users cannot submit a review unless they are logged but they can fill out a form. If a user fills out a form and submits it if not logged it re-directs the user to the Login Page.
 
 ## Pop up modal for a ride review page (within each ride page)
 
-![screenshot]()
+![screenshot](documentation/ride-review-modal-screenshot.png)
 
 Similar to the above.
 
 ##  View all Reviews Page
 
-![screenshot]()
+Screenshot when logged out
+![screenshot](documentation/reviews-screenshot-1.png)
+
+Screenshots when logged in 
+![screenshot](documentation/reviews-screenshot-2.png)
+
+![screenshot](documentation/reviews-screenshot-3.png)
 
 The reviews page is a page where all the reviews are shown that users submit. There is an option on there to edit and delete reviews. If you click on the edit button it takes you back to the write a review page and you can re-fill out the review form and it automatically edits on the review page. Only users who are logged in can edit or delete their own reviews. 
 
@@ -174,17 +180,17 @@ The reviews page is a page where all the reviews are shown that users submit. Th
 
 This is where you go to from the View all Reviews Page to edit your own review.
 
-![screenshot]()
+![screenshot](documentation/edit-review-screenshot.png)
 
 ## Navbar
 
-![screenshot]()
+![screenshot](documentation/navbar-screenshot.png)
 
-This is the navbar which has the links to the relevant pages on the website. 
+This is the navbar which has the links to the relevant pages on the website. There is hamburger menu for smaller size screens.
 
 ## Footer
 
-![screenshot]()
+![screenshot](documentation/footer-screenshot.png)
 
 This is the footer that contains the logo and the social links.
 
