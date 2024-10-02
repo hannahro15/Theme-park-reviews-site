@@ -1,6 +1,6 @@
 # UK Rides Review Hub (A theme park database and reviews site)
 
-For my Milestone 3 project I am creating a reviews site for theme parks on a database using MongoDB.
+For my Milestone 3 project I have created a Theme Park Ride Reviews website using a database called MongoDB.
 
 The project is a website where users can submit theme park ride reviews to the website using CRUD functionality. There is an all rides page where users can search for rides, and there are also individual theme park pages where it shows just the rides for that particular theme park, this is all via a "Theme Parks" dropdown tab in the navbar. There is also a write a review page, and a view all reviews page via a "Reviews" dropdown tab. As well as writing a review for a ride via the write a review page, you can also write a review via each indivdual ride modal on the theme park pages. 
 
@@ -428,6 +428,8 @@ Everything is looking and showing as expected in different browsers. I have main
 * [Jinja template conditionals](https://stackoverflow.com/questions/29451208/set-default-value-for-select-html-element-in-jinja-template) - For Jinja conditionals in the select tags in the forms.
 
 * All content about the Theme Park rides on the website were written myself and from Google from my knowledge of visiting these theme parks in the past. 
+
+* The Authentication part for the Registration and Login form was taken from the Task Manager Walkthrough on the LMS as the Code Institute advised us to use this code for this particular project.
 
 ## Acknowledgements
 
