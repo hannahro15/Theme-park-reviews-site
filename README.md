@@ -431,7 +431,12 @@ A big thanks to the support from my mentor at the Code Institute, my facilitator
 
 # Deployment
 
-Please find the steps below to deploy to Heroku.
+To run the project type the following in the terminal to install the following:
+
+- pip3 install Flask
+- pip3 install Flask-PyMongo
+
+## Please find the steps below to deploy to Heroku.
 
 Install the following in your terminal first in VS Code/Gitpod.
 - pip3 freeze --local > requirements.txt
