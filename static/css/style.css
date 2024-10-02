@@ -88,6 +88,14 @@ i {
     margin: 10px;
 }
 
+.card-body {
+    flex-direction: column;
+}
+
+.card-info {
+    flex-direction: column;
+}
+
 .form-group {
     padding: 5px;
 }
@@ -97,11 +105,10 @@ i {
     width: 100%;
 }
 
-.ride-container img {
+.card-body img {
     max-height: 200px;
     object-fit: contain;
     width: 90%;
-    height: auto;
     margin-left: 10px;
     margin-right: 10px;
 }
