@@ -429,7 +429,7 @@ Everything is looking and showing as expected in different browsers. I have main
 
 * All content about the Theme Park rides on the website were written myself and from Google from my knowledge of visiting these theme parks in the past. 
 
-* The Authentication part for the Registration and Login form was taken from the Task Manager Walkthrough on the LMS as the Code Institute advised us to use this code for this particular project.
+* The Authentication part for the Registration and Login forms were taken from the Task Manager Walkthrough on the LMS as the Code Institute advised us to use this code for this particular project.
 
 ## Acknowledgements
 
