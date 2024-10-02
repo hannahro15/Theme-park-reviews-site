@@ -203,6 +203,7 @@ This is the footer that contains the logo and the social links.
 - Admin page via website to add, edit, and delete rides rather than directly on MongoDB database.
 - Make the profile page for users and admin when logged in more attractive.
 - Show users own reviews to their profile page.
+- Add images of the rides to the reviews page. This would mean the write a review form page will be removed, as it doesn't directly link to a specific ride so it would just be via a ride modals.
 
 # Testing
 
@@ -217,6 +218,7 @@ This is the footer that contains the logo and the social links.
 ### Unfixed Bugs
 - When first entering the website, the images can take a few seconds to show on the ride pages. This may be because of it being a url for images which I used on the MongoDB website. 
 - Small bug when filling out a form is that you have to manually select a theme park after writing down the ride in the previous field. This means unless you know the ride and the theme park it is from you just you could just make up any ride, and any theme park that goes along with it. To improve the user experience I decided to put a note on the write a review page to say if you don't know the ride and theme park to go to the rides pages to fill out the review forms from there. This prevents this sort of error. Also one would assume you would already know the rides and the theme parks they are in if you are writing reviews on them!
+- Ride Containers:  I couldn't get everything to line up properly in the cards as the images are of different heights anyway. The descriptions are of different lenghts too. I used image urls which are directly in the mongodb database. 
 
 ## Validation
 I have used the HTML, CSS and Python validators to validate my code.
@@ -363,6 +365,10 @@ I have screenshots of my final lighthouse scores after editing things that have 
 | As a user I expect the website to be responsive on a range of screen sizes so I am view it on different devices. | Yes |
 | As a user all social links work in the footer. | Yes |
 
+## Browser Testing
+
+Everything is looking and showing as expected in different browsers. I have mainly been working in Google Chrome but have looked in Safari and everything there looks as expected.
+
 # Credits and Acknowledgements
 
 ## Credits
@@ -393,9 +399,9 @@ I have screenshots of my final lighthouse scores after editing things that have 
 
 ### Images
 
-* [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Images) - For the home image and all the ride images
+* [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Images) - For the home image and all the ride images. The images that are used in the ride containers for the rides are directly in the mongodb database using an image url.
 
-* [Font Awesome](https://fontawesome.com/icons) - For the icons used for the social links in the footer
+* [Font Awesome](https://fontawesome.com/icons) - For the icons used for the social links in the footer.
 
 ### Validators
 
@@ -414,6 +420,8 @@ I have screenshots of my final lighthouse scores after editing things that have 
 * [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - For the relevant documentation
 
 * [Hidden Input Fields ](https://www.w3schools.com/tags/att_input_type_hidden.asp) - When submitting the form and some of the fields didn't transfer over to the reviews page, advised by ChatGPT.
+
+* [Jinja template conditionals](https://stackoverflow.com/questions/29451208/set-default-value-for-select-html-element-in-jinja-template) - For Jinja conditionals in the select tags in the forms.
 
 * All content about the Theme Park rides on the website were written myself and from Google from my knowledge of visiting these theme parks in the past. 
 
