@@ -405,11 +405,11 @@ Everything is looking and showing as expected in different browsers. I have main
 
 ### Validators
 
-* [HTML Validator]() - HTML Validator
+* [HTML Validator](https://validator.w3.org/) - HTML Validator
 
-* [CSS Validator]() - CSS Validator
+* [CSS Validator](https://jigsaw.w3.org/css-validator/) - CSS Validator
 
-* [PEP8 Python Validator]() - Python Validator
+* [PEP8 Python Validator](https://pep8ci.herokuapp.com/#) - Python Validator
 
 ### Content/Documentation
 
