@@ -92,6 +92,10 @@ https://theme-park-reviews-website-f1f235eaa19d.herokuapp.com/
 * As a user I expect the website to be responsive on a range of screen sizes so I am view it on different devices.
 * As a user all social links work in the footer.
 
+## Fonts and Colours
+
+I have decided to keep a clean and basic font and colour scheme with a standard default Sans-Serif font, and a peachy-yellowy background colour for the main body elements of the website so everything is displayed clearly to the user.
+
 ##  Database Schema
 
 Please see below the Database Schema screenshot for my project. I used MongoDB Database to build my project with.
